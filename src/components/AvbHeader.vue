@@ -6,6 +6,7 @@
     absolute
   >
     <v-toolbar-title color="text">
+      <v-icon>mdi-football-helmet</v-icon>
       Name
     </v-toolbar-title>
     <v-spacer />

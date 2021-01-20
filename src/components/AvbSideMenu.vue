@@ -47,7 +47,7 @@
 
 <script>
 export default {
-    name: 'AvbMenuLateral',
+    name: 'AvbSideMenu',
     data: () => {
         return{
             drawer: true,
