@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 
 import Login from '../views/Login.vue'
 import Dashboard from '../views/Dashboard.vue'
+import Ranking from '../views/Ranking.vue'
+import Bets from '../views/Bets.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +22,16 @@ const routes = [
         path: '/dashboard',
         name: 'Dashboard',
         component: Dashboard
+    },
+    {
+        path: '/ranking',
+        name: 'Ranking',
+        component: Ranking
+    },
+    {
+        path: '/bets',
+        name: 'Bets',
+        component: Bets
     }
 ]
 

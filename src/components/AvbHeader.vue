@@ -5,9 +5,14 @@
     color="primary"
     absolute
   >
-    <v-toolbar-title color="text">
+    <v-avatar>Logo</v-avatar>
+    <v-spacer />
+    <v-toolbar-title
+      color="text"
+      style="font-weight:bold"
+    >
       <v-icon>mdi-football-helmet</v-icon>
-      Name
+      Bolim
     </v-toolbar-title>
     <v-spacer />
     <v-switch

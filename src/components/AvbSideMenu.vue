@@ -4,10 +4,11 @@
     :mini-variant.sync="mini"
     permanent
     height="100%"
+    color="background2"
   >
     <v-list-item>
       <v-list-item-icon>
-        <v-icon>
+        <v-icon color="text">
           mdi-account
         </v-icon>
       </v-list-item-icon>
@@ -21,7 +22,9 @@
         icon
         @click.stop="mini = !mini"
       >
-        <v-icon>mdi-chevron-left</v-icon>
+        <v-icon color="text">
+          mdi-chevron-left
+        </v-icon>
       </v-btn>
     </v-list-item>
 
@@ -34,7 +37,9 @@
         link
       >
         <v-list-item-icon>
-          <v-icon>{{ item.icon }}</v-icon>
+          <v-icon color="text">
+            {{ item.icon }}
+          </v-icon>
         </v-list-item-icon>
 
         <v-list-item-content>
@@ -42,6 +47,29 @@
         </v-list-item-content>
       </v-list-item>
     </v-list>
+
+    <template v-slot:append>
+      <v-divider />
+      <v-list dense>
+        <v-list-item
+          v-for="item in itemsConfig"
+          :key="item.title"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon color="text">
+              {{ item.icon }}
+            </v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>
+              {{ item.title }}
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </template>
   </v-navigation-drawer>
 </template>
 
@@ -55,8 +83,9 @@ export default {
                 { title: 'Apostas', icon: 'mdi-tournament' },
                 { title: 'Resultados', icon: 'mdi-scoreboard' },
                 { title: 'Ranking', icon: 'mdi-trophy' },
-                { title: 'Sair do App', icon: 'mdi-exit-to-app' },
+
             ],
+            itemsConfig:[{ title: 'Sair do App', icon: 'mdi-exit-to-app' },],
             mini: true,
         }
     }

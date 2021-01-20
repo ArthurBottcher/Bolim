@@ -3,7 +3,7 @@
     <AvbHeader />
     <v-container
       class="d-flex pa-0"
-      style="margin-top:50px;  height:calc(100vh - 48px)"
+      style="margin-top:48px;  height:calc(100vh - 48px)"
       fluid
     >
       <AvbSideMenu />
@@ -13,13 +13,14 @@
         outlined
         class="pa-2 mx-auto"
         tile
+        color="background"
       >
         <v-card-title>Visão Geral</v-card-title>
         <v-row class="text-center">
           <v-col>
             <v-card
-              outlined
-              elevation="0"
+              rounded="xl"
+              elevation="2"
               class="text-center"
             >
               <v-card-title>
@@ -48,8 +49,8 @@
 
           <v-col>
             <v-card
-              outlined
-              elevation="0"
+              rounded="xl"
+              elevation="2"
               class="text-center"
             >
               <v-card-title>Suas ultimas apostas</v-card-title>
@@ -58,14 +59,15 @@
 
           <v-col>
             <v-card
-              outlined
-              elevation="0"
+              rounded="xl"
+              elevation="2"
               class="text-center"
             >
               <v-card-title>Jogos da rodada</v-card-title>
             </v-card>
           </v-col>
         </v-row>
+        <v-row />
       </v-card>
     </v-container>
   </div>
@@ -86,7 +88,8 @@ export default {
                 {name: 'Teste1', points: 30+'pts'},
                 {name: 'Teste2', points: 25+'pts'},
                 {name: 'Teste3', points: 23+'pts'}
-            ]
+            ],
+
         }
     }
 }
