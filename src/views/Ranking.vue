@@ -28,8 +28,8 @@ export default {
     data: () => {
         return{
             headers: [
-                {text:'Nome', value:'name'},
-                {text:'Pontos', value:'points'},
+                {text:'Nome', value:'name', align: 'center'},
+                {text:'Pontos', value:'points', align: 'center'},
             ],
             items: [
                 {name:'Russel Wilson', points: 35},

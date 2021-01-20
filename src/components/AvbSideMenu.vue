@@ -85,7 +85,11 @@ export default {
                 { title: 'Ranking', icon: 'mdi-trophy' },
 
             ],
-            itemsConfig:[{ title: 'Sair do App', icon: 'mdi-exit-to-app' },],
+            itemsConfig:[
+                { title: 'Informações', icon: 'mdi-information' },
+                { title: 'Ajuda', icon: 'mdi-help-circle' },
+                { title: 'Sair do App', icon: 'mdi-arrow-left-bold-circle' },
+            ],
             mini: true,
         }
     }
