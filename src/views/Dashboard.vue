@@ -21,7 +21,7 @@
             <v-card
               rounded="xl"
               elevation="2"
-              class="text-center"
+              class="text-center pa-3"
             >
               <v-card-title>
                 Top 3 <v-icon
@@ -51,7 +51,7 @@
             <v-card
               rounded="xl"
               elevation="2"
-              class="text-center"
+              class="text-center pa-3"
             >
               <v-card-title>Suas ultimas apostas</v-card-title>
             </v-card>
@@ -61,7 +61,7 @@
             <v-card
               rounded="xl"
               elevation="2"
-              class="text-center"
+              class="text-center pa-3"
             >
               <v-card-title>Jogos da rodada</v-card-title>
             </v-card>

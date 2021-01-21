@@ -55,6 +55,7 @@
           v-for="item in itemsConfig"
           :key="item.title"
           link
+          @click="openDialog(item)"
         >
           <v-list-item-icon>
             <v-icon color="text">
@@ -70,12 +71,54 @@
         </v-list-item>
       </v-list>
     </template>
+
+    <v-dialog
+      v-model="helpDialog"
+      width="60%"
+      class="d-flex justify-center"
+      transition="dialog-bottom-transition"
+    >
+      <v-card class="text-center">
+        <v-card-title class="text-center justify-center">
+          Entre em contato para obter ajuda
+        </v-card-title>
+        <v-card-text>
+          Entre no servidor do Discord e busce pelo canal de ajuda sobre o bolão. <br>
+          Faça parte do grupo do Whatsapp para receber as atualizações e tirar dúvidas.
+        </v-card-text>
+        <v-card-actions class="justify-space-around pb-4">
+          <v-btn icon>
+            <v-icon color="#25d366">
+              mdi-whatsapp
+            </v-icon>
+          </v-btn>
+          <v-btn icon>
+            <v-icon color="#7289da">
+              mdi-discord
+            </v-icon>
+          </v-btn>
+          <v-btn icon>
+            <v-icon color="#1da1f2">
+              mdi-twitter
+            </v-icon>
+          </v-btn>
+        </v-card-actions>
+        <v-btn
+          class="mb-4"
+          color="error"
+          @click="helpDialog = false"
+        >
+          Fechar
+        </v-btn>
+      </v-card>
+    </v-dialog>
   </v-navigation-drawer>
 </template>
 
 <script>
 export default {
     name: 'AvbSideMenu',
+    components: { },
     data: () => {
         return{
             drawer: true,
@@ -91,6 +134,16 @@ export default {
                 { title: 'Sair do App', icon: 'mdi-arrow-left-bold-circle' },
             ],
             mini: true,
+            helpDialog: false
+        }
+    },
+
+    methods: {
+        openDialog(item){
+            if(item.title == 'Ajuda'){
+                this.helpDialog = true
+                item = ''
+            }
         }
     }
 }
