@@ -3,7 +3,7 @@
     <AvbHeader />
     <v-container
       class="d-flex pa-0"
-      style="margin-top:48px;  height:calc(100vh - 48px)"
+      style="margin-top:48px; height:calc(100% - 48px)"
       fluid
     >
       <AvbSideMenu />
@@ -17,11 +17,11 @@
       >
         <v-card-title>Visão Geral</v-card-title>
         <v-row class="text-center">
-          <v-col>
+          <v-col cols="4">
             <v-card
               rounded="xl"
               elevation="2"
-              class="text-center pa-3"
+              class="text-center pa-3 .flex-nowrap"
             >
               <v-card-title class="secondary--text justify-center">
                 Top 3 <v-icon
@@ -47,19 +47,19 @@
             </v-card>
           </v-col>
 
-          <v-col>
+          <v-col cols="4">
             <v-card
               rounded="xl"
               elevation="2"
-              class="text-center pa-3"
+              class="text-center pa-3 "
             >
-              <v-card-title class="accent--text justify-center">
+              <v-card-title class="accent--text justify-center ">
                 Suas ultimas apostas
               </v-card-title>
             </v-card>
           </v-col>
 
-          <v-col>
+          <v-col cols="4">
             <v-card
               rounded="xl"
               elevation="2"
@@ -73,7 +73,7 @@
         </v-row>
 
         <v-row>
-          <v-col cols="2">
+          <v-col>
             <v-card
               rounded="xl"
               elevation="2"
@@ -94,8 +94,10 @@
 </template>
 
 <script>
+
 import AvbHeader from '../components/AvbHeader.vue'
 import AvbSideMenu from '../components/AvbSideMenu'
+
 export default {
     name: 'Dashboard',
     components: {
@@ -117,6 +119,6 @@ export default {
 
 <style>
     #page{
-        min-height: 100vh;
+        min-height: 100%;
     }
 </style>

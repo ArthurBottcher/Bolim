@@ -57,9 +57,6 @@
 
 <script>
 
-//import router from '../routes/index'
-
-
 export default {
     name: 'Login',
     components: {},
@@ -91,7 +88,7 @@ export default {
 <style lang="css">
 
     #divLogin {
-        height: 100vh;
+        height: 100%;
         width: 100vw;
         background: #dedede;
     }

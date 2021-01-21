@@ -12,9 +12,11 @@
       >
         Faça suas apostas
       </h2>
+      <span class="subtitle text-center">Clique nos valores para editar</span>
       <v-btn
         color="accent"
-        class="mx-auto my-4"
+        class="mx-auto mb-4 mt-2"
+        @click="envia(items)"
       >
         Enviar apostas
       </v-btn>
@@ -65,7 +67,9 @@
 </template>
 
 <script>
+
 import AvbHeader from '../components/AvbHeader'
+
 export default {
     name: 'Bets',
     components: {AvbHeader},
@@ -85,6 +89,12 @@ export default {
                 {id:2, timeA: 'Dolphins',   pointsA:0, timeB:'Patriots',    pointsB:0, x:'vs'},
                 {id:3, timeA: 'Chiefs',     pointsA:0, timeB:'Broncos',     pointsB:0, x:'vs'}
             ]
+        }
+    },
+
+    methods: {
+        envia(i){
+            console.log(i)
         }
     }
 }

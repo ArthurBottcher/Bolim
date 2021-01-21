@@ -13,9 +13,13 @@
         </v-icon>
       </v-list-item-icon>
       <v-list-item-content>
-        <v-list-item-title>User</v-list-item-title>
-        <v-list-item-subtitle style="font-size:10pt;">
-          Configurações
+        <v-list-item-title class="text-center">
+          User
+        </v-list-item-title>
+        <v-list-item-subtitle class="text-center">
+          <v-icon size="20">
+            mdi-cogs
+          </v-icon>
         </v-list-item-subtitle>
       </v-list-item-content>
       <v-btn
@@ -157,10 +161,14 @@
           Você deseja realmente sair?
         </v-card-title>
         <v-card-actions class="justify-space-around">
-          <v-btn color="success">
+          <v-btn
+            color="success"
+            class="mb-4"
+          >
             Sair
           </v-btn>
           <v-btn
+            class="mb-4"
             color="error"
             @click="logoutDialog = false"
           >
@@ -173,6 +181,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'AvbSideMenu',
     components: { },
@@ -186,7 +195,7 @@ export default {
 
             ],
             itemsConfig:[
-                { title: 'Informações', icon: 'mdi-information' },
+                { title: 'Infos', icon: 'mdi-information' },
                 { title: 'Ajuda', icon: 'mdi-help-circle' },
                 { title: 'Sair', icon: 'mdi-arrow-left-bold-circle' },
             ],
@@ -203,7 +212,7 @@ export default {
                 this.helpDialog = true
             }else if (item.title == 'Sair'){
                 this.logoutDialog = true
-            }else if (item.title == 'Informações'){
+            }else if (item.title == 'Infos'){
                 this.infoDialog = true
             }
         }

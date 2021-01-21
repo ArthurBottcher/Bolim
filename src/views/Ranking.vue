@@ -6,6 +6,9 @@
       fluid
       class="pa-3"
     >
+      <h1 class="text-center">
+        Classificação geral
+      </h1>
       <v-data-table
         style="width: 95%; border: 1px solid rgba(0, 0, 0, 0.12)"
         class="mx-auto"
@@ -19,7 +22,9 @@
 </template>
 
 <script>
+
 import AvbHeader from '../components/AvbHeader'
+
 export default {
     name: 'Ranking',
     components:{
