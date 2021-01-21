@@ -72,6 +72,31 @@
       </v-list>
     </template>
 
+    <!-- dialog infos -->
+    <v-dialog
+      v-model="infoDialog"
+      width="60%"
+      class="d-flex justify-center"
+      transition="dialog-bottom-transition"
+    >
+      <v-card class="text-center">
+        <v-card-title class="text-center justify-center">
+          Informações
+        </v-card-title>
+        <v-card-text>
+          Ao acertar o vencedor o você ganha 1 ponto, ao acertar o placar você ganha mais dois pontos, totalizando 3.
+        </v-card-text>
+        <v-btn
+          class="mb-4"
+          color="error"
+          @click="infoDialog = false"
+        >
+          Fechar
+        </v-btn>
+      </v-card>
+    </v-dialog>
+
+    <!-- dialog ajuda -->
     <v-dialog
       v-model="helpDialog"
       width="60%"
@@ -84,7 +109,16 @@
         </v-card-title>
         <v-card-text>
           Entre no servidor do Discord e busce pelo canal de ajuda sobre o bolão. <br>
-          Faça parte do grupo do Whatsapp para receber as atualizações e tirar dúvidas.
+          Faça parte do grupo do Whatsapp para receber as atualizações e tirar dúvidas.<br>
+          Ou entre em contato pelo email:
+        </v-card-text>
+        <v-card-text style="font-size:10pt; font-weight:bold">
+          <v-icon
+            color="#c71610"
+            class="mr-2"
+          >
+            mdi-email
+          </v-icon>arthurbottcher@gmail.com
         </v-card-text>
         <v-card-actions class="justify-space-around pb-4">
           <v-btn icon>
@@ -112,6 +146,29 @@
         </v-btn>
       </v-card>
     </v-dialog>
+
+    <!-- dialog sair -->
+    <v-dialog
+      v-model="logoutDialog"
+      width="30%"
+    >
+      <v-card>
+        <v-card-title class="justify-center">
+          Você deseja realmente sair?
+        </v-card-title>
+        <v-card-actions class="justify-space-around">
+          <v-btn color="success">
+            Sair
+          </v-btn>
+          <v-btn
+            color="error"
+            @click="logoutDialog = false"
+          >
+            Cancelar
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-navigation-drawer>
 </template>
 
@@ -131,10 +188,12 @@ export default {
             itemsConfig:[
                 { title: 'Informações', icon: 'mdi-information' },
                 { title: 'Ajuda', icon: 'mdi-help-circle' },
-                { title: 'Sair do App', icon: 'mdi-arrow-left-bold-circle' },
+                { title: 'Sair', icon: 'mdi-arrow-left-bold-circle' },
             ],
             mini: true,
-            helpDialog: false
+            helpDialog: false,
+            logoutDialog: false,
+            infoDialog: false,
         }
     },
 
@@ -142,7 +201,10 @@ export default {
         openDialog(item){
             if(item.title == 'Ajuda'){
                 this.helpDialog = true
-                item = ''
+            }else if (item.title == 'Sair'){
+                this.logoutDialog = true
+            }else if (item.title == 'Informações'){
+                this.infoDialog = true
             }
         }
     }

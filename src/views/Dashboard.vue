@@ -23,10 +23,10 @@
               elevation="2"
               class="text-center pa-3"
             >
-              <v-card-title>
+              <v-card-title class="secondary--text justify-center">
                 Top 3 <v-icon
                   class="ml-3"
-                  color="text"
+                  color="secondary"
                 >
                   mdi-medal
                 </v-icon>
@@ -53,7 +53,9 @@
               elevation="2"
               class="text-center pa-3"
             >
-              <v-card-title>Suas ultimas apostas</v-card-title>
+              <v-card-title class="accent--text justify-center">
+                Suas ultimas apostas
+              </v-card-title>
             </v-card>
           </v-col>
 
@@ -63,11 +65,29 @@
               elevation="2"
               class="text-center pa-3"
             >
-              <v-card-title>Jogos da rodada</v-card-title>
+              <v-card-title class="secondary--text justify-center">
+                Jogos da rodada
+              </v-card-title>
             </v-card>
           </v-col>
         </v-row>
-        <v-row />
+
+        <v-row>
+          <v-col cols="2">
+            <v-card
+              rounded="xl"
+              elevation="2"
+              class="text-center pa-3"
+            >
+              <v-card-title class="justify-center accent--text">
+                Seus pontos
+              </v-card-title>
+              <v-card-text class="headline text-center text--text">
+                35 pts
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
       </v-card>
     </v-container>
   </div>
