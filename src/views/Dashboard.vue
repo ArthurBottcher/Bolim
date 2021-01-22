@@ -8,7 +8,7 @@
     >
       <!-- <AvbSideMenu /> -->
       <v-card
-        width="95%"
+        width="100%"
         elevation="0"
         outlined
         class="pa-2 mx-auto"
