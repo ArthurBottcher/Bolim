@@ -6,7 +6,7 @@
       style="margin-top:48px; height:calc(100% - 48px)"
       fluid
     >
-      <AvbSideMenu />
+      <!-- <AvbSideMenu /> -->
       <v-card
         width="95%"
         elevation="0"
@@ -62,7 +62,7 @@
 <script>
 
 import AvbHeader from '../components/AvbHeader.vue'
-import AvbSideMenu from '../components/AvbSideMenu'
+// import AvbSideMenu from '../components/AvbSideMenu'
 
 import AvbTopUsers from '../components/AvbTopUsers'
 import AvbLastBets from '../components/AvbLastBets'
@@ -73,7 +73,7 @@ export default {
     name: 'Dashboard',
     components: {
         AvbHeader,
-        AvbSideMenu,
+        // AvbSideMenu,
         AvbTopUsers,
         AvbLastBets,
         AvbNextGames,
