@@ -51,7 +51,18 @@
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon color="text">
+            mdi-account-cog
+          </v-icon>
+        </v-list-item-icon>
+        <v-list-item-content><v-list-item-title>Admin</v-list-item-title></v-list-item-content>
+      </v-list-item>
     </v-list>
+
+
 
     <template v-slot:append>
       <v-divider />

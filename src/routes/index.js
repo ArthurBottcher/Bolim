@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import Dashboard from '../views/Dashboard.vue'
 import Ranking from '../views/Ranking.vue'
 import Bets from '../views/Bets.vue'
+import Admin from '../views/Admin.vue'
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,11 @@ const routes = [
         path: '/bets',
         name: 'Bets',
         component: Bets
+    },
+    {
+        path: '/admin',
+        name: 'Admin',
+        component: Admin
     }
 ]
 
