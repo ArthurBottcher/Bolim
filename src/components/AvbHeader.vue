@@ -8,8 +8,10 @@
     <v-avatar>Logo</v-avatar>
     <v-spacer />
     <v-toolbar-title
+      id="title"
       color="text"
       style="font-weight:bold"
+      @click="goToDashboard()"
     >
       <v-icon>mdi-football-helmet</v-icon>
       Bolim
@@ -25,11 +27,21 @@
 </template>
 
 <script>
+import router from '../routes'
 export default {
-    name: 'AvbHeader'
+    name: 'AvbHeader',
+    methods: {
+        goToDashboard(){
+            if(this.$router.currentRoute.path != '/dashboard'){
+                router.push({path: '/dashboard'})
+            }
+        }
+    }
 }
 </script>
 
 <style>
-
+    #title:hover{
+        cursor: pointer
+    }
 </style>

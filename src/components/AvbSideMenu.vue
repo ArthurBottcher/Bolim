@@ -39,6 +39,7 @@
         v-for="item in items"
         :key="item.title"
         link
+        @click="routeTo(item)"
       >
         <v-list-item-icon>
           <v-icon color="text">
@@ -181,7 +182,7 @@
 </template>
 
 <script>
-
+import router from '../routes/index'
 export default {
     name: 'AvbSideMenu',
     components: { },
@@ -214,6 +215,16 @@ export default {
                 this.logoutDialog = true
             }else if (item.title == 'Infos'){
                 this.infoDialog = true
+            }
+        },
+
+        routeTo(item){
+            if(item.title == 'Apostas'){
+                router.push({path: '/bets'})
+            }else if (item.title == 'Resultados'){
+                router.push({path: '/results'})
+            }else if (item.title == 'Ranking'){
+                router.push({path:'/ranking'})
             }
         }
     }
