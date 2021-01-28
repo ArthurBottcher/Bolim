@@ -6,6 +6,7 @@ import Dashboard from '../views/Dashboard.vue'
 import Ranking from '../views/Ranking.vue'
 import Bets from '../views/Bets.vue'
 import Admin from '../views/Admin.vue'
+import Configs from '../views/Configs.vue'
 
 Vue.use(VueRouter)
 
@@ -38,6 +39,11 @@ const routes = [
         path: '/admin',
         name: 'Admin',
         component: Admin
+    },
+    {
+        path: '/configs',
+        name: 'Configs',
+        component: Configs
     }
 ]
 

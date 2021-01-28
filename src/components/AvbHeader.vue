@@ -263,6 +263,10 @@ export default {
             }else if (item.title == 'Ranking'){
                 router.push({path:'/ranking'})
             }
+        },
+
+        goToConfigs(){
+            router.push({path: '/configs'})
         }
     }
 }

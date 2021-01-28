@@ -26,7 +26,9 @@
             </v-card-title>
             <v-form>
               <v-row>
-                <v-col cols="2">
+                <v-col
+                  cols="2"
+                >
                   <v-text-field
                     label="Week"
                     type="number"
