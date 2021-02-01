@@ -7,6 +7,7 @@ import Ranking from '../views/Ranking.vue'
 import Bets from '../views/Bets.vue'
 import Admin from '../views/Admin.vue'
 import Configs from '../views/Configs.vue'
+import Results from '../views/Results.vue'
 
 Vue.use(VueRouter)
 
@@ -44,6 +45,11 @@ const routes = [
         path: '/configs',
         name: 'Configs',
         component: Configs
+    },
+    {
+        path: '/results',
+        name: 'Results',
+        component: Results
     }
 ]
 

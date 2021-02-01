@@ -18,12 +18,42 @@
         Bolim
       </v-toolbar-title>
       <v-spacer />
-      <v-switch
-        v-model="$vuetify.theme.dark"
-        dark
-        color="secondary"
-        hide-details="true"
-      />
+      <v-menu
+        bottom
+        left
+      >
+        <template
+          v-slot:activator="{ on, attrs }"
+          class="d-flex"
+        >
+          <v-btn
+            dark
+            icon
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list class="d-flex">
+          <v-list-item class="d-flex justify-content align-center">
+            <v-icon
+              color="text"
+              class="mx-1"
+            >
+              mdi-theme-light-dark
+            </v-icon>
+            <v-switch
+              v-model="$vuetify.theme.dark"
+              class="my-0"
+              dark
+              color="secondary"
+              hide-details="true"
+            />
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -75,7 +105,10 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item link>
+        <v-list-item
+          link
+          @click="goToAdmin"
+        >
           <v-list-item-icon>
             <v-icon color="text">
               mdi-account-cog
@@ -147,6 +180,7 @@
           <v-card-text>
             Entre no servidor do Discord e busce pelo canal de ajuda sobre o bolão. <br>
             Faça parte do grupo do Whatsapp para receber as atualizações e tirar dúvidas.<br>
+            Nos siga no twitter e acompanhe as novidades.<br>
             Ou entre em contato pelo email:
           </v-card-text>
           <v-card-text style="font-size:10pt; font-weight:bold">
@@ -222,6 +256,7 @@ export default {
         return{
             drawer: false,
             items: [
+                { title: 'Home', icon: 'mdi-home' },
                 { title: 'Apostas', icon: 'mdi-tournament' },
                 { title: 'Resultados', icon: 'mdi-scoreboard' },
                 { title: 'Ranking', icon: 'mdi-trophy' },
@@ -262,7 +297,13 @@ export default {
                 router.push({path: '/results'})
             }else if (item.title == 'Ranking'){
                 router.push({path:'/ranking'})
+            }else{
+                router.push({path: '/dashboard'})
             }
+        },
+
+        goToAdmin(){
+            router.push({path: '/admin'})
         },
 
         goToConfigs(){

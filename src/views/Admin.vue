@@ -30,6 +30,7 @@
                   cols="2"
                 >
                   <v-text-field
+                    outlined
                     label="Week"
                     type="number"
                   />
@@ -52,6 +53,7 @@
                 <v-col cols="6">
                   <v-autocomplete
                     v-model="timeA"
+                    outlined
                     :items="times"
                     label="Time A"
                   />
@@ -59,6 +61,7 @@
                 <v-col cols="6">
                   <v-autocomplete
                     v-model="timeB"
+                    outlined
                     :items="times"
                     label="Time B"
                   />
@@ -78,6 +81,8 @@
                 <v-col cols="8">
                   <v-autocomplete
                     v-model="jogo"
+                    placeholder="Selecione o jogo"
+                    outlined
                     :items="jogos"
                     item-text="description"
                     item-value="item"
@@ -101,6 +106,7 @@
                 <v-col cols="4">
                   <v-text-field
                     v-model="pointsA"
+                    outlined
                     class="ml-auto"
                     style="width: 50%"
                     :label="jogo.timeA"
@@ -110,6 +116,7 @@
                 <v-col cols="4">
                   <v-text-field
                     v-model="pointsB"
+                    outlined
                     class="mr-auto"
                     style="width: 50%"
                     :label="jogo.timeB"
