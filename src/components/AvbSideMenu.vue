@@ -101,6 +101,7 @@
         </v-card-title>
         <v-card-text>
           Ao acertar o vencedor o você ganha 1 ponto, ao acertar o placar você ganha mais dois pontos, totalizando 3.
+          **Em desenvolvimento**
         </v-card-text>
         <v-btn
           class="mb-4"
