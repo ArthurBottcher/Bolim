@@ -21,36 +21,27 @@
           v-model="tabs"
           class="mx-auto"
           fixed-tabs
-          slider-color="accent"
-          color="accent"
+          slider-color="secondary"
+          color="secondary"
         >
           <v-tab>Top 5</v-tab>
           <v-tab>Suas ultimas apostas</v-tab>
           <v-tab>Proximos Jogos</v-tab>
           <v-tab>Seus pontos</v-tab>
 
-          <v-tab-item
-            class="mx-auto pa-6"
-            style="width: 60%"
-          >
+          <v-tab-item class="mx-auto pa-6">
             <AvbTopUsers />
           </v-tab-item>
-          <v-tab-item
-            class="mx-auto pa-6"
-            style="width: 60%"
-          >
+
+          <v-tab-item class="mx-auto pa-6">
             <AvbLastBets />
           </v-tab-item>
-          <v-tab-item
-            class="mx-auto pa-6"
-            style="width: 60%"
-          >
+
+          <v-tab-item class="mx-auto pa-6">
             <AvbNextGames />
           </v-tab-item>
-          <v-tab-item
-            class="mx-auto pa-6"
-            style="width: 60%"
-          >
+
+          <v-tab-item class="mx-auto pa-6">
             <AvbYourPoints />
           </v-tab-item>
         </v-tabs>

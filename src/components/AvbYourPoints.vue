@@ -3,8 +3,9 @@
     elevation="0"
     class="text-center pa-3"
     width="100%"
+    outlined
   >
-    <v-card-title class="justify-center accent--text">
+    <v-card-title class="justify-center secondary--text">
       Seus pontos
     </v-card-title>
     <v-card-text class="headline text-center text--text">

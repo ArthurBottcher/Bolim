@@ -14,7 +14,7 @@
       </h2>
       <span class="subtitle text-center">Clique nos valores para editar</span>
       <v-btn
-        color="accent"
+        color="secondary"
         class="mx-auto mb-4 mt-2"
         @click="envia(items)"
       >

@@ -4,15 +4,20 @@
     class="text-center pa-3"
     width="100%"
   >
-    <v-card-title class="accent--text justify-center ">
+    <v-card-title class="secondary--text justify-center ">
       Suas ultimas apostas
     </v-card-title>
-    <v-list dense>
+    <v-list
+      dense
+    >
       <v-list-item
         v-for="i in items"
         :key="i.id"
       >
-        <v-list-item-title style="border-bottom: 1px solid rgba(0, 0, 0, 0.12">
+        <v-list-item-title
+          style="border: 1px solid rgba(0, 0, 0, 0.12"
+          class="pa-3 ma-1 rounded"
+        >
           {{ i.timeA }}: {{ i.pointsA }} x {{ i.pointsB }}: {{ i.timeB }}
         </v-list-item-title>
       </v-list-item>

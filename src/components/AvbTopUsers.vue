@@ -13,13 +13,13 @@
       </v-icon>
     </v-card-title>
     <v-list
-      width="95%"
-      class="mx-auto"
+      dense
     >
       <v-list-item
         v-for="top in tops"
         :key="top.name"
-        style="border-bottom: 1px solid rgba(0, 0, 0, 0.12)"
+        style="border: 1px solid rgba(0, 0, 0, 0.12)"
+        class="ma-1 rounded"
       >
         <v-list-item-title>{{ top.name }}</v-list-item-title>
         <v-list-item-subtitle>{{ top.points }}</v-list-item-subtitle>
