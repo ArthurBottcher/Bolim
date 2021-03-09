@@ -83,6 +83,7 @@
                     v-model="jogo"
                     placeholder="Selecione o jogo"
                     outlined
+                    color="secondary"
                     :items="jogos"
                     item-text="description"
                     item-value="item"
@@ -110,6 +111,7 @@
                     class="ml-auto"
                     style="width: 50%"
                     :label="jogo.timeA"
+                    color="secondary"
                   />
                 </v-col>
                 <v-col cols="4" />
@@ -120,6 +122,7 @@
                     class="mr-auto"
                     style="width: 50%"
                     :label="jogo.timeB"
+                    color="secondary"
                   />
                 </v-col>
               </v-row>

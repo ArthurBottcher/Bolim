@@ -2,12 +2,12 @@
   <div>
     <v-app-bar
       dark
-      dense
       color="primary"
+      dense
       absolute
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-spacer />
+      <!-- <v-spacer /> -->
       <v-toolbar-title
         id="title"
         color="text"
@@ -19,12 +19,10 @@
       </v-toolbar-title>
       <v-spacer />
       <v-menu
-        bottom
-        left
+        offset-y
       >
         <template
           v-slot:activator="{ on, attrs }"
-          class="d-flex"
         >
           <v-btn
             dark
@@ -36,19 +34,18 @@
           </v-btn>
         </template>
 
-        <v-list class="d-flex">
-          <v-list-item class="d-flex justify-content align-center">
+        <v-list class="d-flex justify-space-between px-2">
+          <v-list-item class="d-flex justify-space-between px-2">
             <v-icon
               color="text"
-              class="mx-1"
             >
               mdi-theme-light-dark
             </v-icon>
             <v-switch
               v-model="$vuetify.theme.dark"
-              class="my-0"
+              class="my-0 py-0 mx-1"
               dark
-              color="secondary"
+              color="gray"
               hide-details="true"
             />
           </v-list-item>

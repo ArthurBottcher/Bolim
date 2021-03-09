@@ -15,6 +15,7 @@
         readonly
         hide-default-footer
         :headers="headers"
+        header-props=""
         :items="items"
       />
     </v-container>

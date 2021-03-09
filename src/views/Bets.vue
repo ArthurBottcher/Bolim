@@ -2,24 +2,26 @@
   <div id="page">
     <AvbHeader />
     <v-container
-      style="margin-top: 48px"
+      style="margin-top: 68px"
       fluid
       class="pa-3 d-flex flex-column justify-center"
     >
       <h2
-        class="text-center mx-auto"
-        style="width: 95%;"
+        class="text-center"
       >
         Faça suas apostas
       </h2>
-      <span class="subtitle text-center">Clique nos valores para editar</span>
+      <v-subheader class="justify-center">
+        Clique nos valores para editar
+      </v-subheader>
       <v-btn
         color="secondary"
-        class="mx-auto mb-4 mt-2"
+        class="mx-auto mb-4"
         @click="envia(items)"
       >
         Enviar apostas
       </v-btn>
+
       <v-data-table
         :headers="headers"
         :items="items"
@@ -36,6 +38,7 @@
             <template v-slot:input>
               <v-text-field
                 v-model="item.pointsA"
+                color="secondary"
                 label="Pontuação"
                 single-line
                 type="number"
@@ -44,9 +47,7 @@
           </v-edit-dialog>
         </template>
 
-        <template
-          v-slot:[`item.pointsB`]="{ item }"
-        >
+        <template v-slot:[`item.pointsB`]="{ item }">
           <v-edit-dialog
             :return-value.sync="item.pointsB"
           >
@@ -54,6 +55,7 @@
             <template v-slot:input>
               <v-text-field
                 v-model="item.pointsB"
+                color="secondary"
                 label="Pontuação"
                 single-line
                 type="number"

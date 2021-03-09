@@ -6,7 +6,6 @@
     >
     <v-app
       id="app"
-      :style="{ background: $vuetify.theme.themes.dark.background}"
     >
       <router-view />
     </v-app>

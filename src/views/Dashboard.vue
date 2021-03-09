@@ -15,7 +15,9 @@
         tile
         color="background"
       >
-        <v-card-title>Visão Geral</v-card-title>
+        <v-card-title class="justify-center">
+          Visão Geral
+        </v-card-title>
 
         <v-tabs
           v-model="tabs"
