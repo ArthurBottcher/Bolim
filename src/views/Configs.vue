@@ -48,7 +48,7 @@
           Configurações da conta
         </h2>
         <v-card-title>
-          <AvbFileUploadButton />
+          <AvbFileUploadButton name="Arthur VB" />
         </v-card-title>
         <v-divider />
       </v-card>

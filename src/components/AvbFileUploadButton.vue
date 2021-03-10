@@ -1,8 +1,9 @@
 <template>
-  <v-main>
+  <v-main class="d-flex">
     <v-avatar
       size="66"
       color="grey lighten-5"
+      class="mr-2"
     >
       <div
         class="imagePreviewWrapper"
@@ -10,15 +11,10 @@
         @click="selectImage"
       />
     </v-avatar>
-
-
-
-    <p class="mx-3">
-      Arthur V Bottcher
-    </p>
+    {{ name }}
     <v-btn
       color="primary"
-      class="text-none"
+      class="text-none ml-2"
       rounded
       depressed
       :loading="isSelecting"
@@ -41,6 +37,12 @@
 
 <script>
 export default {
+    props:{
+        name:{
+            type: String,
+            default:''
+        }
+    },
     data() {
         return {
             previewImage: null,
