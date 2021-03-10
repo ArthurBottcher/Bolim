@@ -1,3 +1,3 @@
 # Bolim
 
-Bolão Golim Sports Web
+Bolão Golim Sports Web : bolim.vercel.app
