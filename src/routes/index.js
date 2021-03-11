@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
 import Login from '../views/Login.vue'
-import Dashboard from '../views/Dashboard.vue'
+import Home from '../views/Home.vue'
 import Ranking from '../views/Ranking.vue'
 import Bets from '../views/Bets.vue'
 import Admin from '../views/Admin.vue'
@@ -22,9 +21,9 @@ const routes = [
         component: Login
     },
     {
-        path: '/dashboard',
-        name: 'Dashboard',
-        component: Dashboard
+        path: '/home',
+        name: 'Home',
+        component: Home
     },
     {
         path: '/ranking',

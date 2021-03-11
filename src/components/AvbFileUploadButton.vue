@@ -49,7 +49,14 @@ export default {
             isSelecting: false
         }
     },
+    mounted() {
+        this.active()
+    },
     methods: {
+        active(){
+            this.previewImage = sessionStorage.getItem('userImage')
+        },
+
         selectImage () {
             this.$refs.fileInput.click()
         },
@@ -64,7 +71,7 @@ export default {
                 let reader = new FileReader
                 reader.onload = e => {
                     this.previewImage = e.target.result
-
+                    sessionStorage.setItem('userImage', this.previewImage)
                 }
                 reader.readAsDataURL(file[0])
                 this.$emit('input', file[0])

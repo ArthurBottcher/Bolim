@@ -4,45 +4,44 @@
       dense
       class="d-flex pa-0 ma-0"
       color="primary"
+      rounded
     >
+      <!-- Sub pages -->
       <v-list-item
         v-for="item in items"
         :key="item.title"
+        dark
         link
+        class="list-item mx-1"
         @click="routeTo(item)"
       >
-        <!-- <v-list-item-icon>
-          <v-icon color="text">
-            {{ item.icon }}
-          </v-icon>
-        </v-list-item-icon> -->
-
         <v-list-item-content>
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
 
-      <v-menu
-        offset-y
-      >
-        <template
-          v-slot:activator="{ on, attrs }"
-        >
+      <!-- Menu configuração -->
+      <v-menu offset-y>
+        <template v-slot:activator="{ on, attrs }">
           <v-btn
-            class="text-none"
+            class="text-none list-item"
             text
-            height=""
+            rounded
+            height="40px"
             style="font-size: 0.8125rem; font-weight: 500; line-height: 1rem; letter-spacing: normal"
             v-bind="attrs"
             v-on="on"
           >
-            <!-- <v-icon class="mr-6">
-              mdi-cogs
-            </v-icon> -->
             Configurações
           </v-btn>
         </template>
-        <v-list>
+        <v-list
+          dense
+          dark
+          tile
+          class="pa-2"
+          color="primary"
+        >
           <v-list-item
             v-for="item in itemsConfig"
             :key="item.title"
@@ -50,7 +49,7 @@
             @click="openDialog(item)"
           >
             <v-list-item-icon>
-              <v-icon color="text">
+              <v-icon>
                 {{ item.icon }}
               </v-icon>
             </v-list-item-icon>
@@ -198,9 +197,9 @@ export default {
         }
     },
     methods: {
-        goToDashboard(){
-            if(this.$router.currentRoute.path != '/dashboard'){
-                router.push({path: '/dashboard'})
+        goToHome(){
+            if(this.$router.currentRoute.path != '/home'){
+                router.push({path: '/home'})
             }
         },
 
@@ -211,23 +210,27 @@ export default {
                 this.logoutDialog = true
             }else if (item.title == 'Infos'){
                 this.infoDialog = true
+            }else if (item.title == 'Perfil'){
+                router.push({path: '/configs'})
             }
         },
 
         routeTo(item){
-            if(item.title == 'Apostas'){
+            if(item.title == 'Apostas' && this.$router.currentRoute.path != '/bets'){
                 router.push({path: '/bets'})
-            }else if (item.title == 'Resultados'){
+            }else if (item.title == 'Resultados' && this.$router.currentRoute.path != '/results'){
                 router.push({path: '/results'})
-            }else if (item.title == 'Ranking'){
+            }else if (item.title == 'Ranking' && this.$router.currentRoute.path != '/ranking'){
                 router.push({path:'/ranking'})
-            }else{
-                router.push({path: '/dashboard'})
+            }else if (item.title == 'Home' && this.$router.currentRoute.path != '/home'){
+                router.push({path: '/home'})
             }
         },
 
         goToAdmin(){
-            router.push({path: '/admin'})
+            if(this.$router.currentRoute.path != '/admin'){
+                router.push({path: '/admin'})
+            } else return
         },
 
         goToConfigs(){
@@ -236,3 +239,10 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+$border: #204d85;
+.list-item{
+  border: 1.5px solid $border
+}
+</style>

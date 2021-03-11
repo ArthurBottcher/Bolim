@@ -26,7 +26,7 @@
           slider-color="secondary"
           color="secondary"
         >
-          <v-tab>Top 5</v-tab>
+          <v-tab>Líderes</v-tab>
           <v-tab>Suas ultimas apostas</v-tab>
           <v-tab>Proximos Jogos</v-tab>
           <v-tab>Seus pontos</v-tab>
@@ -63,7 +63,7 @@ import AvbNextGames from '../components/AvbNextGames'
 import AvbYourPoints from '../components/AvbYourPoints'
 
 export default {
-    name: 'Dashboard',
+    name: 'Home',
     components: {
         AvbHeader,
         // AvbSideMenu,

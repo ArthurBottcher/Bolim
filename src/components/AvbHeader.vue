@@ -11,7 +11,7 @@
         id="title"
         color="text"
         style="font-weight:bold"
-        @click="goToDashboard()"
+        @click="goToHome()"
       >
         <v-icon>mdi-football-helmet</v-icon>
         Bolim
@@ -58,10 +58,18 @@
 </template>
 
 <script>
+import router from '../routes'
 import AvbNavMenu from './AvbNavMenu'
 export default {
     name: 'AvbHeader',
-    components: {AvbNavMenu}
+    components: {AvbNavMenu},
+    methods:{
+        goToHome(){
+            if(this.$router.currentRoute.path != '/home'){
+                router.push({path: '/home'})
+            }
+        }
+    }
 }
 </script>
 

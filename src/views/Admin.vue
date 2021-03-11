@@ -14,11 +14,34 @@
         slider-color="secondary"
         color="secondary"
       >
+        <v-tab>Definir Semana Atual</v-tab>
         <v-tab>Adicionar Jogos</v-tab>
         <v-tab>Definir resultados</v-tab>
         <v-tab>Atualizar pontuação usuários</v-tab>
 
+        <!-- Definir semana atual -->
+        <v-tab-item>
+          <v-card>
+            <v-card-title class="justify-center">
+              Definir a semana atual
+            </v-card-title>
+            <v-row class="justify-center">
+              <v-col
+                cols="6"
+              >
+                <v-autocomplete
+                  :items="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]"
+                  class="mx-auto"
+                  style="widht:150px"
+                  label="Week atual"
+                  outlined
+                />
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-tab-item>
 
+        <!-- Adicionar nova partida -->
         <v-tab-item>
           <v-card>
             <v-card-title class="justify-center">
@@ -71,6 +94,7 @@
           </v-card>
         </v-tab-item>
 
+        <!-- Adicionar resultado -->
         <v-tab-item>
           <v-card>
             <v-card-title class="justify-center">
@@ -130,6 +154,7 @@
           </v-card>
         </v-tab-item>
 
+        <!-- Atualizar pontuação dos usuários -->
         <v-tab-item>
           <v-btn
             block

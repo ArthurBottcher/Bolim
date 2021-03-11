@@ -7,7 +7,12 @@
           color="grey lighten-2"
           size="66"
           class="mr-5"
-        />
+        >
+          <div
+            class="imagePreviewWrapper"
+            :style="{'background-image': `url(${srcImage})`}"
+          />
+        </v-avatar>
         Arthur V. Bottcher
         <v-spacer />
         <v-btn
@@ -19,22 +24,25 @@
           Edite seu perfil
         </v-btn>
       </v-card-title>
+
       <v-expansion-panels>
         <v-expansion-panel>
           <v-expansion-panel-header>Suas Informações</v-expansion-panel-header>
           <v-expansion-panel-content>
             <v-row>
               <v-col cols="4">
-                <p label="text" />
+                <p>Nome:</p>
               </v-col>
               <v-col cols="4">
-                <p label="text" />
+                <p>Email:</p>
               </v-col>
               <v-col cols="4">
-                <p
-                  label="text"
-                  readonly
-                />
+                <p>Time Favorito:</p>
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col cols="4">
+                <p>Redes Sociais:</p>
               </v-col>
             </v-row>
           </v-expansion-panel-content>
@@ -51,6 +59,9 @@
           <AvbFileUploadButton name="Arthur VB" />
         </v-card-title>
         <v-divider />
+        <v-btn @click="closeDialog">
+          Close
+        </v-btn>
       </v-card>
     </v-dialog>
   </div>
@@ -70,10 +81,33 @@ export default {
             dialogUpdateAccount:false,
             srcImage:''
         }
+    },
+    mounted() {
+        this.active()
+    },
+    methods: {
+        active(){
+            this.srcImage = sessionStorage.getItem('userImage')
+        },
+
+        closeDialog(){
+            this.dialogUpdateAccount = false
+            this.active()
+        }
     }
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+.imagePreviewWrapper {
+    width: 50px;
+    height: 50px;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+    background-size: contain;
+    background-position: center center;
+}
+
 
 </style>
