@@ -4,7 +4,7 @@
     <v-card style="margin-top:68px">
       <v-card-title>
         <v-avatar
-          color="grey lighten-2"
+          color="grey lighten-5"
           size="66"
           class="mr-5"
         >

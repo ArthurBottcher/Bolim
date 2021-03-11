@@ -10,6 +10,7 @@
       shaped
     >
       <v-img
+        v-if="!$vuetify.breakpoint.mobile"
         src="../assets/bets.png"
         width="300px"
         contain
@@ -63,12 +64,16 @@
           >
             Cadastre-se
           </v-btn> -->
+
           <v-subheader>
-            Não possui uma conta?<span
-              class="secondary--text ml-1"
-              @click="dialogRegister = true"
-            > Cadastre-se</span>
+            Não possui uma conta?
           </v-subheader>
+          <span
+            class="secondary--text body-2 font-weight-bold"
+            @click="dialogRegister = true"
+          >
+            Cadastre-se
+          </span>
         </v-form>
       </v-container>
     </v-card>

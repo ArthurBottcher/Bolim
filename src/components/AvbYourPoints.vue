@@ -8,7 +8,7 @@
     <v-card-title class="justify-center secondary--text">
       Seus pontos
     </v-card-title>
-    <v-card-text class="headline text-center text--text">
+    <v-card-text class="headline text-center">
       35 pts
     </v-card-text>
   </v-card>

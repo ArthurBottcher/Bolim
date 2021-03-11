@@ -8,7 +8,6 @@
       <div
         class="imagePreviewWrapper"
         :style="{'background-image': `url(${previewImage})`}"
-        @click="selectImage"
       />
     </v-avatar>
     {{ name }}
@@ -57,9 +56,7 @@ export default {
             this.previewImage = sessionStorage.getItem('userImage')
         },
 
-        selectImage () {
-            this.$refs.fileInput.click()
-        },
+
         onButtonClick() {
 
             this.$refs.fileInput.click()
