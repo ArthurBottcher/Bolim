@@ -24,7 +24,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### Link aplicação
 
--[Bolim](https://bolim.vercel.app/)
+[Bolim](https://bolim.vercel.app/)
 
 ### Licença
 

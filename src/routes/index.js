@@ -7,18 +7,28 @@ import Bets from '../views/Bets.vue'
 import Admin from '../views/Admin.vue'
 import Configs from '../views/Configs.vue'
 import Results from '../views/Results.vue'
+import PageError from '../views/PageError.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '*',
+        redirect: '/page-error'
+    },
+    {
+        path: '/',
         redirect: '/login'
     },
     {
         path: '/login',
         name: 'Login',
         component: Login
+    },
+    {
+        path: '/page-error',
+        name: 'PageError',
+        component: PageError
     },
     {
         path: '/home',
