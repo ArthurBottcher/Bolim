@@ -1,7 +1,15 @@
 <template>
-  <div id="page">
+  <div
+    id="page"
+    class="d-flex justify-center"
+  >
     <AvbHeader />
-    <v-card style="margin-top:68px">
+    <v-card
+      style="margin-top:68px"
+      width="85%"
+      elevation="0"
+      color="background"
+    >
       <v-card-title>
         <v-avatar
           color="grey lighten-5"
@@ -13,7 +21,9 @@
             :style="{'background-image': `url(${srcImage})`}"
           />
         </v-avatar>
-        Arthur V. Bottcher
+        <p class="ma-0">
+          Username
+        </p>
         <v-spacer />
         <v-btn
           text
@@ -25,7 +35,10 @@
         </v-btn>
       </v-card-title>
 
-      <v-expansion-panels>
+      <v-expansion-panels
+        flat
+        class="panels"
+      >
         <v-expansion-panel>
           <v-expansion-panel-header>Suas Informações</v-expansion-panel-header>
           <v-expansion-panel-content>
@@ -51,16 +64,57 @@
     </v-card>
 
     <v-dialog v-model="dialogUpdateAccount">
-      <v-card height="85vh">
-        <h2 class="ma-2">
+      <v-card
+        color="background"
+        height="85vh"
+        class="pa-6"
+      >
+        <span class="ma-2 title">
           Configurações da conta
-        </h2>
+        </span>
         <v-card-title>
-          <AvbFileUploadButton name="Arthur VB" />
+          <AvbFileUploadButton name="Username" />
         </v-card-title>
         <v-divider />
-        <v-btn @click="closeDialog">
-          Close
+        <v-row class="px-4 pt-3">
+          <v-col cols="4">
+            <v-text-field
+              outlined
+              hide-details
+              label="Nome"
+            />
+          </v-col>
+          <v-col cols="4">
+            <v-text-field
+              outlined
+              hide-details
+              label="Email"
+            />
+          </v-col>
+          <v-col cols="4">
+            <v-text-field
+              outlined
+              hide-details
+              label="Senha"
+            />
+          </v-col>
+        </v-row>
+        <v-row class="px-4">
+          <v-col cols="4">
+            <v-autocomplete
+              outlined
+              label="Time Favorito"
+            />
+          </v-col>
+        </v-row>
+        <v-btn color="success">
+          Salvar
+        </v-btn>
+        <v-btn
+          color="error"
+          @click="closeDialog"
+        >
+          Cancelar
         </v-btn>
       </v-card>
     </v-dialog>
@@ -103,11 +157,17 @@ export default {
     width: 50px;
     height: 50px;
     display: block;
-    cursor: pointer;
     margin: 0 auto;
     background-size: contain;
     background-position: center center;
 }
 
+p{
+    cursor: default;
+}
+
+.panels{
+    border: 1px solid #ddd;
+}
 
 </style>

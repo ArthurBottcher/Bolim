@@ -3,6 +3,7 @@
     elevation="0"
     class="text-center pa-3"
     width="100%"
+    color="background"
     outlined
   >
     <v-card-title class="justify-center secondary--text">

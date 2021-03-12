@@ -9,7 +9,7 @@
       <v-flex xs12>
         <v-card
           height="400"
-          color="transparent"
+          color="background"
           class="pa-6"
           flat
         >

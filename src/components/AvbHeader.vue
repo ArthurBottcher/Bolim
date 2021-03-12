@@ -1,8 +1,9 @@
 <template>
   <div>
     <v-app-bar
-      dark
-      color="primary"
+      color="background"
+      elevation="0"
+      style="border-bottom: #eee 1px solid"
       dense
       absolute
     >
@@ -74,6 +75,9 @@ export default {
 </script>
 
 <style>
+    header{
+        border-bottom: #eee 1px solid
+    }
     #title:hover{
         cursor: pointer
     }

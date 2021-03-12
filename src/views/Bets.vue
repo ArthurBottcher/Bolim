@@ -28,11 +28,12 @@
         hide-default-footer
         hide-default-header
         style="width: 95%; border: 1px solid rgba(0, 0, 0, 0.12)"
-        class="mx-auto"
+        class="mx-auto colorizeBackground"
       >
         <template v-slot:[`item.pointsA`]="{ item}">
           <v-edit-dialog
             :return-value.sync="item.pointsA"
+            class="colorizeBackground"
           >
             {{ item.pointsA }}
             <template v-slot:input>
@@ -102,7 +103,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+$background: #415662;
+.colorizeBackground{
+    background-color: $background;
+}
+
+td{
+    background-color: $background;
+}
+
+v-edit-dialog{
+    background-color: $background;
+}
     input[type=number]::-webkit-inner-spin-button,
     input[type=number]::-webkit-outer-spin-button {
         -webkit-appearance: none;

@@ -4,6 +4,7 @@
     <v-card
       elevation="0"
       width="95%"
+      color="background"
       class="mx-auto"
     >
       <v-tabs
@@ -13,15 +14,16 @@
         fixed-tabs
         slider-color="secondary"
         color="secondary"
+        background-color="background"
       >
-        <v-tab>Definir Semana Atual</v-tab>
+        <v-tab> Definir Semana Atual</v-tab>
         <v-tab>Adicionar Jogos</v-tab>
         <v-tab>Definir resultados</v-tab>
         <v-tab>Atualizar pontuação usuários</v-tab>
 
         <!-- Definir semana atual -->
         <v-tab-item>
-          <v-card>
+          <v-card color="background">
             <v-card-title class="justify-center">
               Definir a semana atual
             </v-card-title>
@@ -43,7 +45,7 @@
 
         <!-- Adicionar nova partida -->
         <v-tab-item>
-          <v-card>
+          <v-card color="background">
             <v-card-title class="justify-center">
               Adicionar jogo para apostar
             </v-card-title>
@@ -96,7 +98,7 @@
 
         <!-- Adicionar resultado -->
         <v-tab-item>
-          <v-card>
+          <v-card color="background">
             <v-card-title class="justify-center">
               Defina resultado para algum jogo ativo
             </v-card-title>
@@ -155,10 +157,9 @@
         </v-tab-item>
 
         <!-- Atualizar pontuação dos usuários -->
-        <v-tab-item>
+        <v-tab-item class="colorizeBackground pa-5">
           <v-btn
             block
-            class="ma-5"
             color="success"
           >
             <v-icon>mdi-refresh</v-icon> ATUALIZAR
@@ -214,6 +215,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+$background: #415662;
+#page{
+    height: 100vh;
+    width: 100%;
+    background-color: $background;
+}
 
+.colorizeBackground{
+    background-color: $background;
+}
 </style>

@@ -25,25 +25,26 @@
           fixed-tabs
           slider-color="secondary"
           color="secondary"
+          background-color="background"
         >
           <v-tab>Líderes</v-tab>
           <v-tab>Suas ultimas apostas</v-tab>
           <v-tab>Proximos Jogos</v-tab>
           <v-tab>Seus pontos</v-tab>
 
-          <v-tab-item class="mx-auto pa-6">
+          <v-tab-item class="mx-auto pa-6 tabsItens">
             <AvbTopUsers />
           </v-tab-item>
 
-          <v-tab-item class="mx-auto pa-6">
+          <v-tab-item class="mx-auto pa-6 tabsItens">
             <AvbLastBets />
           </v-tab-item>
 
-          <v-tab-item class="mx-auto pa-6">
+          <v-tab-item class="mx-auto pa-6 tabsItens">
             <AvbNextGames />
           </v-tab-item>
 
-          <v-tab-item class="mx-auto pa-6">
+          <v-tab-item class="mx-auto pa-6 tabsItens">
             <AvbYourPoints />
           </v-tab-item>
         </v-tabs>
@@ -80,8 +81,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+$background: #415662;
     #page{
         min-height: 100%;
+    }
+
+    .tabsItens{
+        background-color: $background
     }
 </style>

@@ -3,16 +3,15 @@
     <v-list
       dense
       class="d-flex pa-0 ma-0"
-      color="primary"
+      color="background"
       rounded
     >
       <!-- Sub pages -->
       <v-list-item
         v-for="item in items"
         :key="item.title"
-        dark
         link
-        class="list-item mx-1"
+        class="mx-1"
         @click="routeTo(item)"
       >
         <v-list-item-content>
@@ -24,7 +23,7 @@
       <v-menu offset-y>
         <template v-slot:activator="{ on, attrs }">
           <v-btn
-            class="text-none list-item"
+            class="text-none "
             text
             rounded
             height="40px"
@@ -37,10 +36,9 @@
         </template>
         <v-list
           dense
-          dark
           tile
           class="pa-2"
-          color="primary"
+          color="background"
         >
           <v-list-item
             v-for="item in itemsConfig"
@@ -73,7 +71,10 @@
       class="d-flex justify-center"
       transition="dialog-bottom-transition"
     >
-      <v-card class="text-center">
+      <v-card
+        class="text-center"
+        color="background"
+      >
         <v-card-title class="text-center justify-center">
           Informações
         </v-card-title>
@@ -97,7 +98,10 @@
       class="d-flex justify-center"
       transition="dialog-bottom-transition"
     >
-      <v-card class="text-center">
+      <v-card
+        class="text-center"
+        color="background"
+      >
         <v-card-title class="text-center justify-center">
           Entre em contato para obter ajuda
         </v-card-title>
@@ -147,7 +151,7 @@
       v-model="logoutDialog"
       width="30%"
     >
-      <v-card>
+      <v-card color="background">
         <v-card-title class="justify-center">
           Você deseja realmente sair?
         </v-card-title>
@@ -241,8 +245,5 @@ export default {
 </script>
 
 <style lang="scss">
-$border: #204d85;
-.list-item{
-  border: 1.5px solid $border
-}
+
 </style>

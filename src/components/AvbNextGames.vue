@@ -3,11 +3,13 @@
     elevation="0"
     class="text-center pa-3"
     width="100%"
+    color="background"
   >
     <v-card-title class="secondary--text justify-center">
       Jogos da rodada
     </v-card-title>
     <v-list
+      color="background"
       dense
     >
       <v-list-item

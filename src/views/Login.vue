@@ -5,6 +5,7 @@
   >
     <v-card
       elevation="2"
+      width="70%"
       color="background"
       class="pa-6 d-flex justify-space-between "
       shaped
@@ -12,12 +13,12 @@
       <v-img
         v-if="!$vuetify.breakpoint.mobile"
         src="../assets/bets.png"
-        width="300px"
+        width="400px"
         contain
         aspect-ratio="16/9"
         class="mx-2"
       />
-      <v-container>
+      <v-container class="px-6">
         <v-card-title class="justify-center">
           Login
         </v-card-title>
@@ -34,7 +35,7 @@
             required
             filled
             :rules="emailRules"
-            style="width:100%"
+            style="width:80%"
           />
           <v-text-field
             v-model="password"
@@ -44,12 +45,14 @@
             :rules="passwordRules"
             :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
             :type="show ? 'text' : 'password'"
+            style="width:80%"
             @click:append="show = !show"
             @keydown.enter="login"
           />
           <v-btn
             class="mx-auto"
             color="success"
+            width="60%"
             :disabled="!valid || !email || !password"
             @click="login"
           >
@@ -65,9 +68,9 @@
             Cadastre-se
           </v-btn> -->
 
-          <v-subheader>
+          <span class="mt-3 caption">
             Não possui uma conta?
-          </v-subheader>
+          </span>
           <span
             class="secondary--text body-2 font-weight-bold"
             @click="dialogRegister = true"
@@ -108,10 +111,11 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+$background: #415662;
 #divLogin {
     height: 100%;
     width: 100vw;
-    background: #dedede;
+    background: $background;
 }
 </style>
