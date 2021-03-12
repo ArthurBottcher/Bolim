@@ -60,7 +60,7 @@
           </v-btn>
           <!-- <v-btn
             class="mx-auto my-2"
-            color="secondary"
+            color="primary"
             block
             text
             @click="dialogRegister = true"
@@ -72,7 +72,7 @@
             Não possui uma conta?
           </span>
           <span
-            class="secondary--text body-2 font-weight-bold"
+            class="primary--text body-2 font-weight-bold"
             @click="dialogRegister = true"
           >
             Cadastre-se
@@ -113,9 +113,9 @@ export default {
 
 <style lang="scss">
 $background: #415662;
-#divLogin {
-    height: 100%;
-    width: 100vw;
-    background: $background;
-}
+    #divLogin {
+        height: 100%;
+        width: 100vw;
+        background: $background;
+    }
 </style>
