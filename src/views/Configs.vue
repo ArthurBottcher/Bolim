@@ -40,8 +40,10 @@
         class="panels"
       >
         <v-expansion-panel>
-          <v-expansion-panel-header>Suas Informações</v-expansion-panel-header>
-          <v-expansion-panel-content>
+          <v-expansion-panel-header color="background">
+            Suas Informações
+          </v-expansion-panel-header>
+          <v-expansion-panel-content color="background">
             <v-row>
               <v-col cols="4">
                 <p>Nome:</p>
@@ -153,21 +155,24 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.imagePreviewWrapper {
-    width: 50px;
-    height: 50px;
-    display: block;
-    margin: 0 auto;
-    background-size: contain;
-    background-position: center center;
-}
+$background: #415662;
 
-p{
-    cursor: default;
-}
+    .imagePreviewWrapper {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+        background-size: contain;
+        background-position: center center;
+    }
 
-.panels{
-    border: 1px solid #ddd;
-}
+    p{
+        cursor: default;
+    }
+
+    .panels{
+        border: 1px solid #ddd;
+        background-color: $background;
+    }
 
 </style>

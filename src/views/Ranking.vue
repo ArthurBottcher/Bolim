@@ -10,7 +10,7 @@
         Classificação geral
       </h1>
       <v-data-table
-        style="width: 95%; border: 1px solid rgba(0, 0, 0, 0.12)"
+        style="width: 95%; border: thin solid #676767"
         class="mx-auto"
         readonly
         hide-default-footer
@@ -49,6 +49,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+$background: #415662;
 
+    thead{
+        background-color: $background;
+    }
 </style>

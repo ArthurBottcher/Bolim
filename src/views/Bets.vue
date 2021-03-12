@@ -15,7 +15,7 @@
         Clique nos valores para editar
       </v-subheader>
       <v-btn
-        color="secondary"
+        color="primary"
         class="mx-auto mb-4"
         @click="envia(items)"
       >
@@ -27,7 +27,7 @@
         :items="items"
         hide-default-footer
         hide-default-header
-        style="width: 95%; border: 1px solid rgba(0, 0, 0, 0.12)"
+        style="width: 95%; border: thin solid #676767"
         class="mx-auto colorizeBackground"
       >
         <template v-slot:[`item.pointsA`]="{ item}">
@@ -39,7 +39,7 @@
             <template v-slot:input>
               <v-text-field
                 v-model="item.pointsA"
-                color="secondary"
+                color="primary"
                 label="Pontuação"
                 single-line
                 type="number"
@@ -56,7 +56,7 @@
             <template v-slot:input>
               <v-text-field
                 v-model="item.pointsB"
-                color="secondary"
+                color="primary"
                 label="Pontuação"
                 single-line
                 type="number"
@@ -105,17 +105,18 @@ export default {
 
 <style lang="scss">
 $background: #415662;
-.colorizeBackground{
-    background-color: $background;
-}
+    .colorizeBackground{
+        background-color: $background;
+    }
 
-td{
-    background-color: $background;
-}
+    td{
+        background-color: $background;
+    }
 
-v-edit-dialog{
-    background-color: $background;
-}
+    v-edit-dialog{
+        background-color: $background;
+    }
+
     input[type=number]::-webkit-inner-spin-button,
     input[type=number]::-webkit-outer-spin-button {
         -webkit-appearance: none;

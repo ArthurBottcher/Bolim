@@ -5,7 +5,7 @@
     width="100%"
     color="background"
   >
-    <v-card-title class="secondary--text justify-center ">
+    <v-card-title class="primary--text justify-center ">
       Suas ultimas apostas
     </v-card-title>
     <v-list
@@ -16,10 +16,7 @@
         v-for="i in items"
         :key="i.id"
       >
-        <v-list-item-title
-          style="border: 1px solid rgba(0, 0, 0, 0.12"
-          class="pa-3 ma-1 rounded"
-        >
+        <v-list-item-title class="pa-3 ma-1 rounded">
           {{ i.timeA }}: {{ i.pointsA }} x {{ i.pointsB }}: {{ i.timeB }}
         </v-list-item-title>
       </v-list-item>

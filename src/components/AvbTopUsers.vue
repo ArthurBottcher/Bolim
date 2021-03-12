@@ -5,10 +5,10 @@
     width="100%"
     color="background"
   >
-    <v-card-title class="secondary--text justify-center">
+    <v-card-title class="primary--text justify-center">
       Top 5 <v-icon
         class="ml-3"
-        color="secondary"
+        color="primary"
       >
         mdi-medal
       </v-icon>
@@ -20,10 +20,21 @@
       <v-list-item
         v-for="top in tops"
         :key="top.name"
-        style="border: 1px solid rgba(0, 0, 0, 0.12)"
-        class="ma-1 rounded"
+        class="ma-1"
       >
-        <v-list-item-title>{{ top.name }}</v-list-item-title>
+        <v-list-item-title>
+          <v-avatar
+            color="grey lighten-5"
+            size="48"
+            class="mr-5"
+          >
+            <div
+              class="imagePreviewWrapper"
+              :style="{'background-image': `url(${top.image})`}"
+            />
+          </v-avatar>
+          {{ top.name }}
+        </v-list-item-title>
         <v-list-item-subtitle>{{ top.points }}</v-list-item-subtitle>
       </v-list-item>
     </v-list>
@@ -36,18 +47,32 @@ export default {
     data: () => {
         return{
             tops: [
-                {name: 'Teste1', points: 30+'pts'},
-                {name: 'Teste2', points: 25+'pts'},
-                {name: 'Teste3', points: 23+'pts'},
-                {name: 'Teste4', points: 20+'pts'},
-                {name: 'Teste5', points: 15+'pts'}
+                {name: 'Teste1', points: 30+'pts', image:''},
+                {name: 'Teste2', points: 25+'pts', image:''},
+                {name: 'Teste3', points: 23+'pts', image:''},
+                {name: 'Teste4', points: 20+'pts', image:''},
+                {name: 'Teste5', points: 15+'pts', image:''}
             ],
-
         }
+    },
+    mounted() {
+        this.active()
+    },
+    methods: {
+        active(){
+
+        },
     }
 }
 </script>
 
 <style>
-
+.imagePreviewWrapper {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: 0 auto;
+    background-size: contain;
+    background-position: center center;
+}
 </style>

@@ -12,8 +12,8 @@
         class="mx-auto"
         style="margin-top: 50px"
         fixed-tabs
-        slider-color="secondary"
-        color="secondary"
+        slider-color="primary"
+        color="primary"
         background-color="background"
       >
         <v-tab> Definir Semana Atual</v-tab>
@@ -109,7 +109,7 @@
                     v-model="jogo"
                     placeholder="Selecione o jogo"
                     outlined
-                    color="secondary"
+                    color="primary"
                     :items="jogos"
                     item-text="description"
                     item-value="item"
@@ -137,7 +137,7 @@
                     class="ml-auto"
                     style="width: 50%"
                     :label="jogo.timeA"
-                    color="secondary"
+                    color="primary"
                   />
                 </v-col>
                 <v-col cols="4" />
@@ -148,7 +148,7 @@
                     class="mr-auto"
                     style="width: 50%"
                     :label="jogo.timeB"
-                    color="secondary"
+                    color="primary"
                   />
                 </v-col>
               </v-row>
@@ -217,13 +217,13 @@ export default {
 
 <style lang="scss">
 $background: #415662;
-#page{
-    height: 100vh;
-    width: 100%;
-    background-color: $background;
-}
+    #page{
+        height: 100vh;
+        width: 100%;
+        background-color: $background;
+    }
 
-.colorizeBackground{
-    background-color: $background;
-}
+    .colorizeBackground{
+        background-color: $background;
+    }
 </style>

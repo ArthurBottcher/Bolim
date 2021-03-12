@@ -1,7 +1,10 @@
 <!-- views/NotFound.vue -->
 
 <template>
-  <v-container class="pa-6">
+  <div
+    id="page"
+    class="pa-6"
+  >
     <v-layout
       row
       wrap
@@ -9,6 +12,7 @@
       <v-flex xs12>
         <v-card
           height="400"
+          width="85%"
           color="background"
           class="pa-6"
           flat
@@ -27,13 +31,20 @@
         </v-card>
       </v-flex>
     </v-layout>
-  </v-container>
+  </div>
 </template>
 
-<style>
-  .paragraph-text {
-    font-size: 18px;
-  }
+<style lang="scss">
+$background: #415662;
+
+    #page{
+        background-color: $background;
+        width: 100%;
+    }
+
+    .paragraph-text {
+        font-size: 18px;
+    }
 </style>
 
 <script>

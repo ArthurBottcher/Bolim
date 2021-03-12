@@ -23,8 +23,8 @@
           v-model="tabs"
           class="mx-auto"
           fixed-tabs
-          slider-color="secondary"
-          color="secondary"
+          slider-color="primary"
+          color="primary"
           background-color="background"
         >
           <v-tab>Líderes</v-tab>
@@ -77,7 +77,8 @@ export default {
         return{
             tabs: null,
         }
-    }
+    },
+
 }
 </script>
 
@@ -88,6 +89,8 @@ $background: #415662;
     }
 
     .tabsItens{
-        background-color: $background
+        background-color: $background;
+        min-height: 450px
     }
+
 </style>
