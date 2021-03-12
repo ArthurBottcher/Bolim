@@ -4,9 +4,8 @@
     class="text-center pa-3"
     width="100%"
     color="background"
-    outlined
   >
-    <v-card-title class="justify-center secondary--text">
+    <v-card-title class="justify-center primary--text">
       Seus pontos
     </v-card-title>
     <v-card-text class="headline text-center">
