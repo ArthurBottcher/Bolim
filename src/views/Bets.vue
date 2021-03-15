@@ -17,7 +17,7 @@
       </v-subheader>
       <v-btn
         color="primary"
-        class="mx-auto mb-4"
+        class="mx-auto mb-4 text-none"
         @click="send(items)"
       >
         Enviar apostas

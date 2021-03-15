@@ -50,7 +50,7 @@
             @keydown.enter="login"
           />
           <v-btn
-            class="mx-auto"
+            class="mx-auto text-none"
             color="success"
             width="60%"
             :disabled="!valid || !email || !password"
@@ -58,15 +58,6 @@
           >
             Entrar
           </v-btn>
-          <!-- <v-btn
-            class="mx-auto my-2"
-            color="primary"
-            block
-            text
-            @click="dialogRegister = true"
-          >
-            Cadastre-se
-          </v-btn> -->
 
           <span class="mt-3 caption">
             Não possui uma conta?
@@ -106,7 +97,7 @@ export default {
     },
 
     mounted() {
-        swal({title:'teste', text: 'teste', buttons:{text:'teste'}})
+        swal({title:'Teste', text: 'teste', buttons:{text:'teste'}})
     },
 
     methods: {
@@ -117,9 +108,38 @@ export default {
 
 <style lang="scss">
 $background: #1A3442;
+$background2: #304854;
     #divLogin {
         height: 100%;
         width: 100vw;
         background: $background;
+    }
+
+    .swal-modal {
+        border-radius: 8px;
+    }
+
+    .swal-title {
+        font-family:Arial, Helvetica, sans-serif;
+        margin: 0px;
+        font-size: 24px;
+        margin-bottom: 28px;
+    }
+
+    .swal-text {
+        font-family:Arial, Helvetica, sans-serif;
+        padding: 17px;
+        display: block;
+        margin: 22px;
+        text-align: center;
+    }
+
+    .swal-button {
+        padding: 7px 19px;
+        border-radius: 2px;
+        background-color: #0cd664;
+        font-size: 16px;
+        border: none;
+        font-family:Arial, Helvetica, sans-serif;
     }
 </style>

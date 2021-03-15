@@ -7,6 +7,7 @@
     <v-card
       style="margin-top:68px"
       width="90%"
+      height="85%"
       class="pa-4"
       elevation="0"
       color="background2"
@@ -107,14 +108,19 @@
             <v-autocomplete
               outlined
               label="Time Favorito"
+              background-color="background2"
             />
           </v-col>
         </v-row>
-        <v-btn color="success">
+        <v-btn
+          color="success"
+          class="text-none"
+        >
           Salvar
         </v-btn>
         <v-btn
           color="error"
+          class="text-none"
           @click="closeDialog"
         >
           Cancelar

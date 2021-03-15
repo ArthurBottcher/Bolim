@@ -39,6 +39,8 @@
                   class="mx-auto"
                   style="widht:150px"
                   label="Week atual"
+                  background-color="background2"
+
                   outlined
                 />
               </v-col>
@@ -73,6 +75,7 @@
                 >
                   <v-btn
                     color="success"
+                    class="text-none"
                   >
                     <v-icon class="mr-2">
                       mdi-plus
@@ -87,6 +90,7 @@
                     outlined
                     :items="teams"
                     label="Time A"
+                    background-color="background2"
                   />
                 </v-col>
                 <v-col cols="6">
@@ -95,6 +99,7 @@
                     outlined
                     :items="teams"
                     label="Time B"
+                    background-color="background2"
                   />
                 </v-col>
               </v-row>
@@ -118,7 +123,7 @@
                     v-model="game"
                     placeholder="Selecione o jogo"
                     outlined
-                    color="primary"
+                    background-color="background2"
                     :items="games"
                     item-text="description"
                     item-value="item"
@@ -131,6 +136,7 @@
                 >
                   <v-btn
                     color="success"
+                    class="text-none"
                   >
                     <v-icon class="mr-2">
                       mdi-check
@@ -170,8 +176,9 @@
           <v-btn
             block
             color="success"
+            class="text-none"
           >
-            <v-icon>mdi-refresh</v-icon> ATUALIZAR
+            <v-icon>mdi-refresh</v-icon> Atualizar
           </v-btn>
         </v-tab-item>
       </v-tabs>
@@ -237,4 +244,9 @@ $background2: #304854;
     .colorizeBackground{
         background-color: $background2;
     }
+
+    .theme--dark.v-list {
+        background-color: $background2;
+    }
+
 </style>

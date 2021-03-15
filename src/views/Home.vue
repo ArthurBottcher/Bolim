@@ -56,8 +56,6 @@
 <script>
 
 import AvbHeader from '../components/AvbHeader.vue'
-// import AvbSideMenu from '../components/AvbSideMenu'
-
 import AvbTopUsers from '../components/AvbTopUsers'
 import AvbLastBets from '../components/AvbLastBets'
 import AvbNextGames from '../components/AvbNextGames'
@@ -67,7 +65,6 @@ export default {
     name: 'Home',
     components: {
         AvbHeader,
-        // AvbSideMenu,
         AvbTopUsers,
         AvbLastBets,
         AvbNextGames,
@@ -95,3 +92,4 @@ $background2: #304854;
     }
 
 </style>
+a
