@@ -54,10 +54,12 @@
       color="background"
       temporary
     >
-      <v-list-item>
+      <v-list-item
+        link
+        @click="goToConfigs"
+      >
         <v-list-item-icon
           class="text-center"
-          @click="goToConfigs"
         >
           <v-icon color="text">
             mdi-cogs
@@ -158,7 +160,7 @@
             placar você ganha mais dois pontos, totalizando 3.
           </v-card-text>
           <v-btn
-            class="mb-4"
+            class="mb-4 text-none"
             color="error"
             @click="infoDialog = false"
           >
@@ -215,7 +217,7 @@
             </v-btn>
           </v-card-actions>
           <v-btn
-            class="mb-4"
+            class="mb-4 text-none"
             color="error"
             @click="helpDialog = false"
           >
@@ -236,12 +238,12 @@
           <v-card-actions class="justify-space-around">
             <v-btn
               color="success"
-              class="mb-4"
+              class="mb-4 text-none"
             >
               Sair
             </v-btn>
             <v-btn
-              class="mb-4"
+              class="mb-4 text-none"
               color="error"
               @click="logoutDialog = false"
             >
@@ -303,6 +305,8 @@ export default {
                 router.push({ path: '/results' })
             } else if (item.title == 'Ranking' && this.$router.currentRoute.path != '/ranking') {
                 router.push({ path: '/ranking' })
+            } else if (item.title == 'Home' && this.$router.currentRoute.path != '/home'){
+                router.push({path: '/home'})
             } else return
         },
 
