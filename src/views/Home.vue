@@ -15,7 +15,10 @@
         tile
         color="background"
       >
-        <v-card-title class="justify-center">
+        <v-card-title
+          class="justify-center"
+          style="cursor: default"
+        >
           Visão Geral
         </v-card-title>
 

@@ -9,10 +9,14 @@
     >
       <h2
         class="text-center"
+        style="cursor:default"
       >
         Faça suas apostas
       </h2>
-      <v-subheader class="justify-center">
+      <v-subheader
+        class="justify-center"
+        style="cursor:default"
+      >
         Clique nos valores para editar
       </v-subheader>
       <v-btn
@@ -28,7 +32,7 @@
         :items="items"
         hide-default-footer
         hide-default-header
-        style="width: 95%; border: thin solid #676767"
+        style="width: 95%; border: thin solid #676767; cursor:default"
         class="mx-auto colorizeBackground"
       >
         <template v-slot:[`item.pointsA`]="{ item}">

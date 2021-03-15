@@ -6,11 +6,14 @@
       fluid
       class="pa-3"
     >
-      <h1 class="text-center">
+      <h1
+        class="text-center"
+        style="cursor:default"
+      >
         Classificação geral
       </h1>
       <v-data-table
-        style="width: 95%; border: thin solid #676767"
+        style="width: 95%; border: thin solid #676767; cursor:default"
         class="mx-auto"
         readonly
         hide-default-footer

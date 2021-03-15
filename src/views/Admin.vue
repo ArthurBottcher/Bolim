@@ -27,7 +27,10 @@
             color="background2"
             class="pa-4"
           >
-            <v-card-title class="justify-center">
+            <v-card-title
+              class="justify-center"
+              style="cursor:default"
+            >
               Definir a semana atual
             </v-card-title>
             <v-row class="justify-center">
@@ -54,7 +57,10 @@
             color="background2"
             class="pa-4"
           >
-            <v-card-title class="justify-center">
+            <v-card-title
+              class="justify-center"
+              style="cursor:default"
+            >
               Adicionar jogo para apostar
             </v-card-title>
             <v-form>
@@ -113,7 +119,10 @@
             color="background2"
             class="pa-4"
           >
-            <v-card-title class="justify-center">
+            <v-card-title
+              class="justify-center"
+              style="cursor:default"
+            >
               Defina resultado para algum jogo ativo
             </v-card-title>
             <v-form>

@@ -22,7 +22,7 @@
         :key="top.name"
         class="ma-1"
       >
-        <v-list-item-title>
+        <v-list-item-title style="cursor:default">
           <v-avatar
             color="grey lighten-5"
             size="48"
@@ -35,7 +35,9 @@
           </v-avatar>
           {{ top.name }}
         </v-list-item-title>
-        <v-list-item-subtitle>{{ top.points }}</v-list-item-subtitle>
+        <v-list-item-subtitle style="cursor:default">
+          {{ top.points }}
+        </v-list-item-subtitle>
       </v-list-item>
     </v-list>
   </v-card>

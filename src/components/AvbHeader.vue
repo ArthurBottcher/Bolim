@@ -20,32 +20,6 @@
         Bolim
       </v-toolbar-title>
       <v-spacer />
-      <v-menu offset-y>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            dark
-            icon
-            v-bind="attrs"
-            v-on="on"
-          >
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
-        <v-list class="d-flex justify-space-between px-2">
-          <v-list-item class="d-flex justify-space-between px-2">
-            <v-icon color="text">
-              mdi-theme-light-dark
-            </v-icon>
-            <v-switch
-              v-model="$vuetify.theme.dark"
-              class="my-0 py-0 mx-1"
-              dark
-              color="gray"
-              hide-details="true"
-            />
-          </v-list-item>
-        </v-list>
-      </v-menu>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -152,10 +126,13 @@
           class="text-center"
           color="background2"
         >
-          <v-card-title class="text-center justify-center">
+          <v-card-title
+            class="text-center justify-center"
+            style="cursor:default"
+          >
             Informações
           </v-card-title>
-          <v-card-text>
+          <v-card-text style="cursor:default">
             Ao acertar o vencedor o você ganha 1 ponto, ao acertar o
             placar você ganha mais dois pontos, totalizando 3.
           </v-card-text>
@@ -180,10 +157,13 @@
           class="text-center"
           color="background2"
         >
-          <v-card-title class="text-center justify-center">
+          <v-card-title
+            class="text-center justify-center"
+            style="cursor:default"
+          >
             Entre em contato para obter ajuda
           </v-card-title>
-          <v-card-text>
+          <v-card-text style="cursor:default">
             Entre no servidor do Discord e busce pelo canal de ajuda
             sobre o bolão. <br>
             Faça parte do grupo do Whatsapp para receber as
@@ -191,7 +171,7 @@
             Nos siga no twitter e acompanhe as novidades.<br>
             Ou entre em contato pelo email:
           </v-card-text>
-          <v-card-text style="font-size:10pt; font-weight:bold">
+          <v-card-text style="font-size:10pt; font-weight:bold cursor:default">
             <v-icon
               color="#c71610"
               class="mr-2"
@@ -232,7 +212,10 @@
         width="30%"
       >
         <v-card color="background2">
-          <v-card-title class="justify-center">
+          <v-card-title
+            class="justify-center"
+            style="cursor:default"
+          >
             Você deseja realmente sair?
           </v-card-title>
           <v-card-actions class="justify-space-around">
@@ -325,3 +308,8 @@ export default {
     }
 }
 </script>
+<style lang="scss">
+#title{
+    cursor: pointer;
+}
+</style>

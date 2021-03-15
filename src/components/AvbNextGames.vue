@@ -16,7 +16,10 @@
         v-for="i in items"
         :key="i.id"
       >
-        <v-list-item-title class="pa-3 ma-1 rounded">
+        <v-list-item-title
+          class="pa-3 ma-1 rounded"
+          style="cursor:default"
+        >
           {{ i.teamA }} {{ i.x }} {{ i.teamB }}
         </v-list-item-title>
       </v-list-item>
