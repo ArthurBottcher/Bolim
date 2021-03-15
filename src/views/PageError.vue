@@ -9,10 +9,19 @@
       row
       wrap
     >
-      <v-flex xs12>
+      <v-flex
+        xs12
+        class="d-flex justify-space-around"
+      >
+        <img
+          src="../assets/error.jpg"
+          width="300px"
+          height="300px"
+          class="mx-2 mt-6"
+        >
         <v-card
           height="400"
-          width="85%"
+          width="50%"
           color="background"
           class="pa-6"
           flat
@@ -25,7 +34,6 @@
             ou foi migrada para um universo paralelo.
           </div>
           <div class="paragraph-text mt-1">
-            <br>
             <br>Tente voltar para a pagina inicial. Caso o erro persista entre em contato com o suporte
           </div>
         </v-card>
@@ -35,7 +43,7 @@
 </template>
 
 <style lang="scss">
-$background: #415662;
+$background: #1A3442;
 
     #page{
         background-color: $background;

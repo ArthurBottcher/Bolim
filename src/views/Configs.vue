@@ -6,9 +6,10 @@
     <AvbHeader />
     <v-card
       style="margin-top:68px"
-      width="85%"
+      width="90%"
+      class="pa-4"
       elevation="0"
-      color="background"
+      color="background2"
     >
       <v-card-title>
         <v-avatar
@@ -40,10 +41,10 @@
         class="panels"
       >
         <v-expansion-panel>
-          <v-expansion-panel-header color="background">
+          <v-expansion-panel-header color="background2">
             Suas Informações
           </v-expansion-panel-header>
-          <v-expansion-panel-content color="background">
+          <v-expansion-panel-content color="background2">
             <v-row>
               <v-col cols="4">
                 <p>Nome:</p>
@@ -67,7 +68,7 @@
 
     <v-dialog v-model="dialogUpdateAccount">
       <v-card
-        color="background"
+        color="background2"
         height="85vh"
         class="pa-6"
       >
@@ -155,7 +156,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$background: #415662;
+$background: #1A3442;
+$background2: #304854;
+
+    #page{
+        background-color: $background;
+    }
 
     .imagePreviewWrapper {
         width: 50px;
@@ -172,7 +178,7 @@ $background: #415662;
 
     .panels{
         border: 1px solid #ddd;
-        background-color: $background;
+        background-color: $background2;
     }
 
 </style>

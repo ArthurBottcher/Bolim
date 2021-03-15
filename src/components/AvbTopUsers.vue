@@ -3,7 +3,7 @@
     elevation="0"
     class="text-center pa-3 "
     width="100%"
-    color="background"
+    color="background2"
   >
     <v-card-title class="primary--text justify-center">
       Top 5 <v-icon
@@ -15,7 +15,7 @@
     </v-card-title>
     <v-list
       dense
-      color="background"
+      color="background2"
     >
       <v-list-item
         v-for="top in tops"

@@ -4,6 +4,7 @@
     <v-container
       style="margin-top: 68px"
       fluid
+      flat
       class="pa-3 d-flex flex-column justify-center"
     >
       <h2
@@ -104,17 +105,23 @@ export default {
 </script>
 
 <style lang="scss">
-$background: #415662;
-    .colorizeBackground{
+$background:  #1A3442;
+$background2: #304854;
+
+    #page{
         background-color: $background;
+    }
+
+    .colorizeBackground{
+        background-color: $background2;
     }
 
     td{
-        background-color: $background;
+        background-color: $background2;
     }
 
     v-edit-dialog{
-        background-color: $background;
+        background-color: $background2;
     }
 
     input[type=number]::-webkit-inner-spin-button,

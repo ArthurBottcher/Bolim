@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../views/Login.vue'
-import Home from '../views/Home.vue'
-import Ranking from '../views/Ranking.vue'
-import Bets from '../views/Bets.vue'
 import Admin from '../views/Admin.vue'
+import Bets from '../views/Bets.vue'
 import Configs from '../views/Configs.vue'
-import Results from '../views/Results.vue'
+import Home from '../views/Home.vue'
+import Login from '../views/Login.vue'
 import PageError from '../views/PageError.vue'
+import Ranking from '../views/Ranking.vue'
+import Results from '../views/Results.vue'
 
 Vue.use(VueRouter)
 

@@ -23,7 +23,10 @@
 
         <!-- Definir semana atual -->
         <v-tab-item>
-          <v-card color="background">
+          <v-card
+            color="background2"
+            class="pa-4"
+          >
             <v-card-title class="justify-center">
               Definir a semana atual
             </v-card-title>
@@ -45,7 +48,10 @@
 
         <!-- Adicionar nova partida -->
         <v-tab-item>
-          <v-card color="background">
+          <v-card
+            color="background2"
+            class="pa-4"
+          >
             <v-card-title class="justify-center">
               Adicionar jogo para apostar
             </v-card-title>
@@ -98,7 +104,10 @@
 
         <!-- Adicionar resultado -->
         <v-tab-item>
-          <v-card color="background">
+          <v-card
+            color="background2"
+            class="pa-4"
+          >
             <v-card-title class="justify-center">
               Defina resultado para algum jogo ativo
             </v-card-title>
@@ -216,7 +225,9 @@ export default {
 </script>
 
 <style lang="scss">
-$background: #415662;
+$background: #1A3442;
+$background2: #304854;
+
     #page{
         height: 100vh;
         width: 100%;
@@ -224,6 +235,6 @@ $background: #415662;
     }
 
     .colorizeBackground{
-        background-color: $background;
+        background-color: $background2;
     }
 </style>

@@ -83,7 +83,8 @@ export default {
 </script>
 
 <style lang="scss">
-$background: #415662;
+$background: #1A3442;
+$background2: #304854;
     #page{
         min-height: 100%;
     }

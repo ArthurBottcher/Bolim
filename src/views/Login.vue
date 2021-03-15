@@ -6,7 +6,7 @@
     <v-card
       elevation="2"
       width="70%"
-      color="background"
+      color="background2"
       class="pa-6 d-flex justify-space-between "
       shaped
     >
@@ -112,7 +112,7 @@ export default {
 </script>
 
 <style lang="scss">
-$background: #415662;
+$background: #1A3442;
     #divLogin {
         height: 100%;
         width: 100vw;

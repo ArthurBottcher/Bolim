@@ -3,13 +3,13 @@
     elevation="0"
     class="text-center pa-3"
     width="100%"
-    color="background"
+    color="background2"
   >
     <v-card-title class="primary--text justify-center ">
       Suas ultimas apostas
     </v-card-title>
     <v-list
-      color="background"
+      color="background2"
       dense
     >
       <v-list-item
