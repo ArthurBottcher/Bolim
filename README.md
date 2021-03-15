@@ -19,8 +19,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 -   [Node.js](https://nodejs.org/en/)
 -   [TypeScript](https://www.typescriptlang.org/)
--   [VueJs]()
--   [Vuetify]()
+-   [VueJs](https://vuejs.org/)
+-   [Vuetify](https://vuetifyjs.com/en/)
 
 ### Link aplicação
 

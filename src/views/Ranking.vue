@@ -33,16 +33,16 @@ export default {
     data: () => {
         return{
             headers: [
-                {text:'Nome', value:'name', align: 'center'},
+                {text:'Nome',   value:'name',   align: 'center'},
                 {text:'Pontos', value:'points', align: 'center'},
             ],
             items: [
-                {name:'Russel Wilson', points: 35},
-                {name:'Tom Brady', points: 30},
-                {name:'Drew Brees', points: 25},
-                {name:'Pat Mahomes', points: 15},
-                {name:'Aaron Rodgers', points: 10},
-                {name:'Cam Newton', points: 5},
+                {name:'Russel Wilson',  points: 35},
+                {name:'Tom Brady',      points: 30},
+                {name:'Drew Brees',     points: 25},
+                {name:'Pat Mahomes',    points: 15},
+                {name:'Aaron Rodgers',  points: 10},
+                {name:'Cam Newton',     points: 5},
             ]
         }
     }

@@ -84,6 +84,8 @@
 </template>
 
 <script>
+import swal from 'sweetalert'
+
 export default {
     name: 'Login',
     components: {},
@@ -103,7 +105,9 @@ export default {
         }
     },
 
-    mounted() {},
+    mounted() {
+        swal({title:'teste', text: 'teste', buttons:{text:'teste'}})
+    },
 
     methods: {
         async login() {}

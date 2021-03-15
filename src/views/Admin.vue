@@ -83,17 +83,17 @@
               <v-row>
                 <v-col cols="6">
                   <v-autocomplete
-                    v-model="timeA"
+                    v-model="teamA"
                     outlined
-                    :items="times"
+                    :items="teams"
                     label="Time A"
                   />
                 </v-col>
                 <v-col cols="6">
                   <v-autocomplete
-                    v-model="timeB"
+                    v-model="teamB"
                     outlined
-                    :items="times"
+                    :items="teams"
                     label="Time B"
                   />
                 </v-col>
@@ -115,11 +115,11 @@
               <v-row>
                 <v-col cols="8">
                   <v-autocomplete
-                    v-model="jogo"
+                    v-model="game"
                     placeholder="Selecione o jogo"
                     outlined
                     color="primary"
-                    :items="jogos"
+                    :items="games"
                     item-text="description"
                     item-value="item"
                     :return-object="true"
@@ -138,14 +138,14 @@
                   </v-btn>
                 </v-col>
               </v-row>
-              <v-row v-if="jogo != null">
+              <v-row v-if="game != null">
                 <v-col cols="4">
                   <v-text-field
                     v-model="pointsA"
                     outlined
                     class="ml-auto"
                     style="width: 50%"
-                    :label="jogo.timeA"
+                    :label="game.teamA"
                     color="primary"
                   />
                 </v-col>
@@ -156,7 +156,7 @@
                     outlined
                     class="mr-auto"
                     style="width: 50%"
-                    :label="jogo.timeB"
+                    :label="game.teamB"
                     color="primary"
                   />
                 </v-col>
@@ -189,18 +189,18 @@ export default {
     data:() => {
         return{
             tabs: null,
-            jogos:[
-                {id:0, timeA: 'Seahawks',  timeB:'Rams',      description: 'Seahawks vs Rams'},
-                {id:1, timeA: '49ers',     timeB:'Cardinals', description: '49ers vs Cardinals'},
-                {id:2, timeA: 'Dolphins',  timeB:'Patriots',  description: 'Dolphins vs Patriots'},
-                {id:3, timeA: 'Chiefs',    timeB:'Broncos',   description: 'Chiefs vs Broncos'}
+            games:[
+                {id:0, teamA: 'Seahawks',  teamB:'Rams',      description: 'Seahawks vs Rams'},
+                {id:1, teamA: '49ers',     teamB:'Cardinals', description: '49ers vs Cardinals'},
+                {id:2, teamA: 'Dolphins',  teamB:'Patriots',  description: 'Dolphins vs Patriots'},
+                {id:3, teamA: 'Chiefs',    teamB:'Broncos',   description: 'Chiefs vs Broncos'}
             ],
-            jogo: null,
+            game: null,
             pointsA: 0,
             pointsB: 0,
-            timeA: '',
-            timeB: '',
-            times: [
+            teamA: '',
+            teamB: '',
+            teams: [
                 'Cardinals',
                 'Seahawks',
                 '49ers',

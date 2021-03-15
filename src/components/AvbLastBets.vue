@@ -17,7 +17,7 @@
         :key="i.id"
       >
         <v-list-item-title class="pa-3 ma-1 rounded">
-          {{ i.timeA }}: {{ i.pointsA }} x {{ i.pointsB }}: {{ i.timeB }}
+          {{ i.teamA }}: {{ i.pointsA }} x {{ i.pointsB }}: {{ i.teamB }}
         </v-list-item-title>
       </v-list-item>
     </v-list>
@@ -30,10 +30,10 @@ export default {
     data: () => {
         return {
             items:[
-                {id:0, timeA: 'Seahawks',   pointsA:0, timeB:'Rams',        pointsB:0, x:'vs'},
-                {id:1, timeA: '49ers',      pointsA:0, timeB:'Cardinals',   pointsB:0, x:'vs'},
-                {id:2, timeA: 'Dolphins',   pointsA:0, timeB:'Patriots',    pointsB:0, x:'vs'},
-                {id:3, timeA: 'Chiefs',     pointsA:0, timeB:'Broncos',     pointsB:0, x:'vs'}
+                {id:0, teamA: 'Seahawks',   pointsA:0,  teamB:'Rams',        pointsB:0, x:'vs'},
+                {id:1, teamA: '49ers',      pointsA:0,  teamB:'Cardinals',   pointsB:0, x:'vs'},
+                {id:2, teamA: 'Dolphins',   pointsA:0,  teamB:'Patriots',    pointsB:0, x:'vs'},
+                {id:3, teamA: 'Chiefs',     pointsA:0,  teamB:'Broncos',     pointsB:0, x:'vs'}
             ]
         }
     }

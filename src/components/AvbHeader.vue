@@ -262,15 +262,15 @@ export default {
         return {
             drawer: false,
             items: [
-                { title: 'Home', icon: 'mdi-home' },
-                { title: 'Apostas', icon: 'mdi-tournament' },
-                { title: 'Resultados', icon: 'mdi-scoreboard' },
-                { title: 'Ranking', icon: 'mdi-trophy' }
+                { title: 'Home',        icon: 'mdi-home' },
+                { title: 'Apostas',     icon: 'mdi-tournament' },
+                { title: 'Resultados',  icon: 'mdi-scoreboard' },
+                { title: 'Ranking',     icon: 'mdi-trophy' }
             ],
             itemsConfig: [
-                { title: 'Infos', icon: 'mdi-information' },
-                { title: 'Ajuda', icon: 'mdi-help-circle' },
-                { title: 'Sair', icon: 'mdi-arrow-left-bold-circle' }
+                { title: 'Infos',   icon: 'mdi-information' },
+                { title: 'Ajuda',   icon: 'mdi-help-circle' },
+                { title: 'Sair',    icon: 'mdi-arrow-left-bold-circle' }
             ],
             mini: true,
             helpDialog: false,
@@ -283,7 +283,9 @@ export default {
             if (this.$router.currentRoute.path != '/home') {
                 router.push({ path: '/home' })
             }
+            else return
         },
+
         openDialog(item) {
             if (item.title == 'Ajuda') {
                 this.helpDialog = true
@@ -291,24 +293,30 @@ export default {
                 this.logoutDialog = true
             } else if (item.title == 'Infos') {
                 this.infoDialog = true
-            }
+            } else return
         },
+
         routeTo(item) {
-            if (item.title == 'Apostas') {
+            if (item.title == 'Apostas' && this.$router.currentRoute.path != '/bets') {
                 router.push({ path: '/bets' })
-            } else if (item.title == 'Resultados') {
+            } else if (item.title == 'Resultados' && this.$router.currentRoute.path != '/results' ) {
                 router.push({ path: '/results' })
-            } else if (item.title == 'Ranking') {
+            } else if (item.title == 'Ranking' && this.$router.currentRoute.path != '/ranking') {
                 router.push({ path: '/ranking' })
-            } else {
-                router.push({ path: '/home' })
-            }
+            } else return
         },
+
         goToAdmin() {
-            router.push({ path: '/admin' })
+            if( this.$router.currentRoute.path != '/admin'){
+                router.push({ path: '/admin' })
+            }
+            else return
         },
+
         goToConfigs() {
-            router.push({ path: '/configs' })
+            if( this.$router.currentRoute.path != '/configs'){
+                router.push({ path: '/configs' })
+            } else return
         }
     }
 }
