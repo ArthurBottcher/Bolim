@@ -8,6 +8,7 @@ import Login from '../views/Login.vue'
 import PageError from '../views/PageError.vue'
 import Ranking from '../views/Ranking.vue'
 import Results from '../views/Results.vue'
+import Register from '../views/Register.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,11 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login
+    },
+    {
+        path: '/register',
+        name: 'Register',
+        component: Register
     },
     {
         path: '/page-error',

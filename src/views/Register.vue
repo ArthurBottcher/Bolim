@@ -1,6 +1,6 @@
 <template>
   <div
-    id="divLogin"
+    id="page"
     class="d-flex justify-center align-center"
   >
     <v-card
@@ -29,6 +29,15 @@
           class="d-flex flex-column align-center"
         >
           <v-text-field
+            v-model="name"
+            label="Name"
+            prepend-inner-icon="mdi-account"
+            required
+            filled
+            :rules="nameRules"
+            style="width:80%"
+          />
+          <v-text-field
             v-model="email"
             label="Email"
             prepend-inner-icon="mdi-email"
@@ -49,6 +58,14 @@
             @click:append="show = !show"
             @keydown.enter="login"
           />
+          <v-autocomplete
+            v-model="teamSelected"
+            label="Time Favorito"
+            :items="teams"
+            :rules="teamRules"
+            style="width:80%"
+            filled
+          />
           <v-btn
             class="mx-auto text-none"
             color="success"
@@ -56,19 +73,16 @@
             :disabled="!valid || !email || !password"
             @click="login"
           >
-            Entrar
+            Cadastrar
           </v-btn>
-
-          <span class="mt-3 caption">
-            Não possui uma conta?
-          </span>
-          <span
-            class="primary--text body-2 font-weight-bold"
-            style="cursor: pointer"
-            @click="goToRegister"
+          <v-btn
+            class="mx-auto mt-3 text-none"
+            color="error"
+            width="60%"
+            @click="goToLogin"
           >
-            Cadastre-se
-          </span>
+            Cancelar
+          </v-btn>
         </v-form>
       </v-container>
     </v-card>
@@ -78,23 +92,26 @@
 <script>
 import router from '../routes'
 
-
 export default {
-    name: 'Login',
+    name: 'Register',
     components: {},
 
     data: () => {
         return {
             valid: false,
             show: false,
+            name:'',
             email: '',
             password: '',
+            teamSelected: '',
             emailRules: [
                 v => !!v || 'E-mail é obrigatório',
                 v => /.+@.+\..+/.test(v) || 'E-mail inválido'
             ],
             nameRules: [v => !!v || 'Nome é obrigatório'],
-            passwordRules: [v => !!v || 'Senha é obrigatório']
+            teamRules: [v => !!v || 'Escolha um time'],
+            passwordRules: [v => !!v || 'Senha é obrigatório'],
+            teams: []
         }
     },
 
@@ -102,10 +119,8 @@ export default {
     },
 
     methods: {
-        async login() {},
-
-        goToRegister(){
-            router.push({path: '/register'})
+        goToLogin(){
+            router.push({path: '/login'})
         }
     }
 }
@@ -114,10 +129,9 @@ export default {
 <style lang="scss">
 $background: #1A3442;
 $background2: #304854;
-    #divLogin {
+    #page {
         height: 100%;
         width: 100vw;
         background: $background;
     }
-
 </style>

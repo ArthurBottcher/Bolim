@@ -8,10 +8,13 @@
 
 ### Features
 
--   [x] Cadastro e login de usuário
--   [ ] Cadastro de jogos
--   [ ] Cadastro de resultados
--   [ ] Atualização dos pontos
+-   [ ] Cadastro e login de usuário.
+-   [ ] Cadastro de jogos.
+-   [ ] Cadastro de resultados.
+-   [ ] Atualização dos pontos.
+-   [ ] Melhorias no visual do site.
+-   [ ] Sistemas de conquistas e recompensas.
+-   [ ] Chat de suporte ao site.
 
 ### 🛠 Tecnologias
 
