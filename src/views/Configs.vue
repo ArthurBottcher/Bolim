@@ -104,14 +104,14 @@
           </v-col>
         </v-row>
         <v-btn
-          color="success"
-          class="text-none"
+          color="success "
+          class="text-none mx-2"
         >
           Salvar
         </v-btn>
         <v-btn
           color="error"
-          class="text-none"
+          class="text-none mx-2"
           @click="closeDialog"
         >
           Cancelar
@@ -160,15 +160,6 @@ $background2: #304854;
 
     #page{
         background-color: $background;
-    }
-
-    .imagePreviewWrapper {
-        width: 50px;
-        height: 50px;
-        display: block;
-        margin: 0 auto;
-        background-size: contain;
-        background-position: center center;
     }
 
     p{

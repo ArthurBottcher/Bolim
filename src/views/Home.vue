@@ -86,13 +86,14 @@ export default {
 $background: #1A3442;
 $background2: #304854;
     #page{
-        min-height: 100%;
+        height: 100vh;
     }
 
     .tabsItens{
         background-color: $background;
-        min-height: 450px
+        min-height: 450px;
+        max-height: 475px;
     }
 
 </style>
-a
+

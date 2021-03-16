@@ -23,7 +23,10 @@
         class="ma-1"
       >
         <v-list-item-title style="cursor:default">
-          <AvbAvatar :image="top.image" />
+          <AvbAvatar
+            :image="top.image"
+            :size="'48px'"
+          />
           {{ top.name }}
         </v-list-item-title>
         <v-list-item-subtitle style="cursor:default">
@@ -64,12 +67,4 @@ export default {
 </script>
 
 <style>
-.imagePreviewWrapper {
-    width: 32px;
-    height: 32px;
-    display: block;
-    margin: 0 auto;
-    background-size: contain;
-    background-position: center center;
-}
 </style>
