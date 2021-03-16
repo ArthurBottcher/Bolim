@@ -23,16 +23,7 @@
         class="ma-1"
       >
         <v-list-item-title style="cursor:default">
-          <v-avatar
-            color="grey lighten-5"
-            size="48"
-            class="mr-5"
-          >
-            <div
-              class="imagePreviewWrapper"
-              :style="{'background-image': `url(${top.image})`}"
-            />
-          </v-avatar>
+          <AvbAvatar :image="top.image" />
           {{ top.name }}
         </v-list-item-title>
         <v-list-item-subtitle style="cursor:default">
@@ -44,8 +35,12 @@
 </template>
 
 <script>
+import AvbAvatar from '../components/Avb-Avatar'
 export default {
     name: 'AvbTopUsers',
+    components: {
+        AvbAvatar
+    },
     data: () => {
         return{
             tops: [

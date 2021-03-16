@@ -13,16 +13,7 @@
       color="background2"
     >
       <v-card-title>
-        <v-avatar
-          color="grey lighten-5"
-          size="66"
-          class="mr-5"
-        >
-          <div
-            class="imagePreviewWrapper"
-            :style="{'background-image': `url(${srcImage})`}"
-          />
-        </v-avatar>
+        <AvbAvatar :image="srcImage" />
         <p class="ma-0">
           Username
         </p>
@@ -131,12 +122,14 @@
 </template>
 
 <script>
-import AvbHeader from '../components/AvbHeader'
-import AvbFileUploadButton from '../components/AvbFileUploadButton'
+import AvbHeader from '../components/Avb-Header'
+import AvbAvatar from '../components/Avb-Avatar'
+import AvbFileUploadButton from '../components/Avb-FileUploadButton'
 export default {
     name: 'Configs',
     components: {
         AvbHeader,
+        AvbAvatar,
         AvbFileUploadButton
     },
     data: ()=>{

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import AvbHeader from '../components/AvbHeader'
+import AvbHeader from '../components/Avb-Header'
 export default {
     name: 'Results',
     components: {

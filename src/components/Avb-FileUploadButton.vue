@@ -1,15 +1,6 @@
 <template>
   <v-main class="d-flex">
-    <v-avatar
-      size="66"
-      color="grey lighten-5"
-      class="mr-2"
-    >
-      <div
-        class="imagePreviewWrapper"
-        :style="{'background-image': `url(${previewImage})`}"
-      />
-    </v-avatar>
+    <AvbAvatar :image="previewImage" />
     {{ name }}
     <v-btn
       color="primary"
@@ -35,7 +26,9 @@
 </template>
 
 <script>
+import AvbAvatar from '../components/Avb-Avatar'
 export default {
+    components:{AvbAvatar},
     props:{
         name:{
             type: String,

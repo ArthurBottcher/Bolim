@@ -58,11 +58,11 @@
 
 <script>
 
-import AvbHeader from '../components/AvbHeader.vue'
-import AvbTopUsers from '../components/AvbTopUsers'
-import AvbLastBets from '../components/AvbLastBets'
-import AvbNextGames from '../components/AvbNextGames'
-import AvbYourPoints from '../components/AvbYourPoints'
+import AvbHeader from '../components/Avb-Header.vue'
+import AvbTopUsers from '../components/Avb-TopUsers'
+import AvbLastBets from '../components/Avb-LastBets'
+import AvbNextGames from '../components/Avb-NextGames'
+import AvbYourPoints from '../components/Avb-YourPoints'
 
 export default {
     name: 'Home',
