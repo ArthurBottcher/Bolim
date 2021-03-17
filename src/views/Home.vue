@@ -2,8 +2,7 @@
   <div id="page">
     <AvbHeader />
     <v-container
-      class="d-flex pa-0"
-      style="margin-top:48px; height:calc(100% - 48px)"
+      class="d-flex pa-0 mt-12"
       fluid
     >
       <!-- <AvbSideMenu /> -->

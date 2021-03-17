@@ -76,7 +76,7 @@
             Cadastrar
           </v-btn>
           <v-btn
-            class="mx-auto mt-3 text-none"
+            class="mx-auto mt-4 text-none"
             color="error"
             width="60%"
             @click="goToLogin"

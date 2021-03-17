@@ -2,10 +2,10 @@
   <div id="page">
     <AvbHeader />
     <v-container
-      style="margin-top: 68px"
+
       fluid
       flat
-      class="pa-3 d-flex flex-column justify-center"
+      class="pa-4 mt-12 d-flex flex-column justify-center"
     >
       <h2
         class="text-center"

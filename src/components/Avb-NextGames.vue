@@ -1,7 +1,7 @@
 <template>
   <v-card
     elevation="0"
-    class="text-center pa-3"
+    class="text-center pa-4"
     width="100%"
     color="background2"
   >
@@ -17,7 +17,7 @@
         :key="i.id"
       >
         <v-list-item-title
-          class="pa-3 ma-1 rounded"
+          class="pa-4 ma-2 rounded"
           style="cursor:default"
         >
           {{ i.teamA }} {{ i.x }} {{ i.teamB }}

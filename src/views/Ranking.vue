@@ -2,9 +2,8 @@
   <div id="page">
     <AvbHeader />
     <v-container
-      style="margin-top: 48px"
       fluid
-      class="pa-3"
+      class="pa-4 mt-12"
     >
       <h1
         class="text-center"

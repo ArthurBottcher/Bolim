@@ -1,13 +1,13 @@
 <template>
   <v-card
     elevation="0"
-    class="text-center pa-3 "
+    class="text-center pa-4 "
     width="100%"
     color="background2"
   >
     <v-card-title class="primary--text justify-center">
       Top 5 <v-icon
-        class="ml-3"
+        class="ml-4"
         color="primary"
       >
         mdi-medal
@@ -20,7 +20,7 @@
       <v-list-item
         v-for="top in tops"
         :key="top.name"
-        class="ma-1"
+        class="ma-2"
       >
         <v-list-item-title style="cursor:default">
           <AvbAvatar

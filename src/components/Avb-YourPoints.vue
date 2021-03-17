@@ -1,7 +1,7 @@
 <template>
   <v-card
     elevation="0"
-    class="text-center pa-3"
+    class="text-center pa-4"
     width="100%"
     color="background2"
   >

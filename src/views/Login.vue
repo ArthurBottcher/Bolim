@@ -59,7 +59,7 @@
             Entrar
           </v-btn>
 
-          <span class="mt-3 caption">
+          <span class="mt-4 caption">
             Não possui uma conta?
           </span>
           <span

@@ -5,10 +5,10 @@
   >
     <AvbHeader />
     <v-card
-      style="margin-top:68px"
+
       width="90%"
       height="85%"
-      class="pa-4"
+      class="pa-4 mt-12"
       elevation="0"
       color="background2"
     >
@@ -71,7 +71,7 @@
           <AvbFileUploadButton name="Username" />
         </v-card-title>
         <v-divider />
-        <v-row class="px-4 pt-3">
+        <v-row class="pa-4">
           <v-col cols="4">
             <v-text-field
               outlined

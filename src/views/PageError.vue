@@ -26,14 +26,14 @@
           class="pa-6"
           flat
         >
-          <div class="display-3 mt-5">
+          <div class="display-3 mt-6">
             Página não encontrada.
           </div>
           <div class="grey--text lighten-5 mt-6">
             A página que você esta tentando acessar nunca existiu nessa realizade,
             ou foi migrada para um universo paralelo.
           </div>
-          <div class="paragraph-text mt-1">
+          <div class="paragraph-text mt-2">
             <br>Tente voltar para a pagina inicial. Caso o erro persista entre em contato com o suporte
           </div>
         </v-card>

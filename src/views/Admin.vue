@@ -9,8 +9,7 @@
     >
       <v-tabs
         v-model="tabs"
-        class="mx-auto"
-        style="margin-top: 50px"
+        class="mx-auto mt-12"
         fixed-tabs
         slider-color="primary"
         color="primary"
@@ -22,10 +21,11 @@
         <v-tab>Atualizar pontuação usuários</v-tab>
 
         <!-- Definir semana atual -->
-        <v-tab-item>
+        <v-tab-item class="itemsTabs">
           <v-card
             color="background2"
             class="pa-4"
+            elevation="0"
           >
             <v-card-title
               class="justify-center"
@@ -52,10 +52,11 @@
         </v-tab-item>
 
         <!-- Adicionar nova partida -->
-        <v-tab-item>
+        <v-tab-item class="itemsTabs">
           <v-card
             color="background2"
             class="pa-4"
+            elevation="0"
           >
             <v-card-title
               class="justify-center"
@@ -114,10 +115,11 @@
         </v-tab-item>
 
         <!-- Adicionar resultado -->
-        <v-tab-item>
+        <v-tab-item class="itemsTabs">
           <v-card
             color="background2"
             class="pa-4"
+            elevation="0"
           >
             <v-card-title
               class="justify-center"
@@ -181,7 +183,7 @@
         </v-tab-item>
 
         <!-- Atualizar pontuação dos usuários -->
-        <v-tab-item class="colorizeBackground pa-5">
+        <v-tab-item class="colorizeBackground pa-6 itemsTabs">
           <v-btn
             block
             color="success"
@@ -255,6 +257,11 @@ $background2: #304854;
     }
 
     .theme--dark.v-list {
+        background-color: $background2;
+    }
+
+    .itemsTabs{
+        min-height: 320px;
         background-color: $background2;
     }
 
