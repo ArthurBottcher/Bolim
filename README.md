@@ -12,9 +12,11 @@
 -   [ ] Cadastro de jogos.
 -   [ ] Cadastro de resultados.
 -   [ ] Atualização dos pontos.
--   [ ] Melhorias no visual do site.
+-   [ ] Mostrar data limite para fechar as apostas
+-   [ ] Melhorias no visual do site (adição de imagens e da logo).
 -   [ ] Sistemas de conquistas e recompensas.
 -   [ ] Chat de suporte ao site.
+-   [ ] Linkar contas com o discord, google, facebook
 
 ### 🛠 Tecnologias
 

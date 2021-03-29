@@ -31,7 +31,7 @@
         >
           <v-tab>Líderes</v-tab>
           <v-tab>Suas ultimas apostas</v-tab>
-          <v-tab>Proximos Jogos</v-tab>
+          <v-tab>Próximos Jogos</v-tab>
           <v-tab>Seus pontos</v-tab>
 
           <v-tab-item class="mx-auto pa-6 tabsItens">

@@ -12,8 +12,12 @@
   </body>
 </template>
 
-<style>
-html{
-    overflow-y: auto  !important ;
-}
+<style lang="scss">
+$background: #1A3442;
+$background2: #304854;
+
+    html{
+        overflow-y: auto  !important;
+    }
+
 </style>

@@ -7,7 +7,7 @@
       elevation="2"
       width="70%"
       color="background2"
-      class="pa-6 d-flex justify-space-between "
+      class="pa-4 d-flex justify-space-between "
       shaped
     >
       <v-img

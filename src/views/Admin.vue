@@ -256,12 +256,13 @@ $background2: #304854;
         background-color: $background2;
     }
 
-    .theme--dark.v-list {
-        background-color: $background2;
-    }
 
     .itemsTabs{
         min-height: 320px;
+        background-color: $background2;
+    }
+
+    .theme--dark.v-list {
         background-color: $background2;
     }
 

@@ -17,7 +17,7 @@
         :key="i.id"
       >
         <v-list-item-title
-          class="pa-4 ma-2 rounded"
+          class="pa-4 my-2  rounded "
           style="cursor:default"
         >
           {{ i.teamA }}: {{ i.pointsA }} x {{ i.pointsB }}: {{ i.teamB }}
