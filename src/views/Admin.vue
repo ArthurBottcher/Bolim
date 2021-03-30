@@ -20,7 +20,6 @@
         <v-tab>Definir resultados</v-tab>
         <v-tab>Atualizar pontuação usuários</v-tab>
 
-        <!-- Definir semana atual -->
         <v-tab-item class="itemsTabs">
           <v-card
             color="background2"
@@ -51,7 +50,6 @@
           </v-card>
         </v-tab-item>
 
-        <!-- Adicionar nova partida -->
         <v-tab-item class="itemsTabs">
           <v-card
             color="background2"
@@ -114,7 +112,6 @@
           </v-card>
         </v-tab-item>
 
-        <!-- Adicionar resultado -->
         <v-tab-item class="itemsTabs">
           <v-card
             color="background2"
@@ -182,7 +179,6 @@
           </v-card>
         </v-tab-item>
 
-        <!-- Atualizar pontuação dos usuários -->
         <v-tab-item class="colorizeBackground pa-6 itemsTabs">
           <v-btn
             block

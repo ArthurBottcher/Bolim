@@ -9,7 +9,6 @@
       absolute
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <!-- <v-spacer /> -->
       <v-toolbar-title
         id="title"
         color="text"
@@ -115,7 +114,7 @@
         </v-list>
       </template>
 
-      <!-- dialog infos -->
+      
       <v-dialog
         v-model="infoDialog"
         width="60%"
@@ -146,7 +145,7 @@
         </v-card>
       </v-dialog>
 
-      <!-- dialog ajuda -->
+      
       <v-dialog
         v-model="helpDialog"
         width="60%"
@@ -206,7 +205,7 @@
         </v-card>
       </v-dialog>
 
-      <!-- dialog sair -->
+      
       <v-dialog
         v-model="logoutDialog"
         width="30%"

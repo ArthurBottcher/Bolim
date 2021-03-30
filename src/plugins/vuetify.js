@@ -23,7 +23,7 @@ export default new Vuetify({
         dark: true
     },
     icons: {
-        iconfont: 'mdiSvg' || 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+        iconfont:  'mdi'
     }
 })
 

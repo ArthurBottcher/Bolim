@@ -5,7 +5,6 @@
       class="d-flex pa-0 mt-12"
       fluid
     >
-      <!-- <AvbSideMenu /> -->
       <v-card
         width="100%"
         elevation="0"

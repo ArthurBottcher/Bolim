@@ -18,7 +18,7 @@
         aspect-ratio="16/9"
         class="mx-2"
       />
-      <v-container class="px-6">
+      <v-container class="px-4">
         <v-card-title class="justify-center">
           Login
         </v-card-title>
@@ -35,17 +35,18 @@
             required
             filled
             :rules="emailRules"
-            style="width:80%"
+            style="width:95%"
           />
           <v-text-field
             v-model="password"
             label="Senha"
             filled
             prepend-inner-icon="mdi-lock"
+            prepend-icon=""
             :rules="passwordRules"
             :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
             :type="show ? 'text' : 'password'"
-            style="width:80%"
+            style="width:95%"
             @click:append="show = !show"
             @keydown.enter="login"
           />
