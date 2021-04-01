@@ -114,7 +114,7 @@
         </v-list>
       </template>
 
-      
+
       <v-dialog
         v-model="infoDialog"
         width="60%"
@@ -145,7 +145,7 @@
         </v-card>
       </v-dialog>
 
-      
+
       <v-dialog
         v-model="helpDialog"
         width="60%"
@@ -170,7 +170,7 @@
             Nos siga no twitter e acompanhe as novidades.<br>
             Ou entre em contato pelo email:
           </v-card-text>
-          <v-card-text style="font-size:10pt; font-weight:bold cursor:default">
+          <v-card-text style="font-size:10pt; font-weight:bold; cursor:default">
             <v-icon
               color="#c71610"
               class="mr-2"
@@ -205,7 +205,7 @@
         </v-card>
       </v-dialog>
 
-      
+
       <v-dialog
         v-model="logoutDialog"
         width="30%"

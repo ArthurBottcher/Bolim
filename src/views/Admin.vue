@@ -181,7 +181,7 @@
 
         <v-tab-item class="colorizeBackground pa-6 itemsTabs">
           <v-btn
-            block
+            width="80%"
             color="success"
             class="text-none"
           >
